@@ -1,0 +1,10 @@
+<map id="include/stringcompare/distance/jarowinkler.h" name="include/stringcompare/distance/jarowinkler.h">
+<area shape="rect" id="node1" title="Compute Jaro&#45;Winkler distance [Wikipedia link]." alt="" coords="32,5,201,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="27,169,112,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="115,244,174,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="309,244,372,271"/>
+<area shape="rect" id="node5" href="$jaro_8h.html" title="Compute Jaro distance [Wikipedia link]." alt="" coords="166,95,224,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="372,169,440,196"/>
+<area shape="rect" id="node7" href="$comparator_8h.html" title="Base class for string comparison functions." alt="" coords="188,169,296,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="198,244,285,271"/>
+</map>

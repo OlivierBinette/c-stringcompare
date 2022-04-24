@@ -1,3 +1,11 @@
+/**
+ * @file jaccard.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute Jaccard distance (overlap between token sets) [<a href="https://en.wikipedia.org/wiki/Jaccard_index">Wikipedia link</a>]
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_JACCARD_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_JACCARD_HPP_INCLUDED
 

@@ -1,3 +1,11 @@
+/**
+ * @file counter.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief (pybind11-friendly) multiset implementation.
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_PREPROCESSING_COUNTER_HPP_INCLUDED
 #define STRINGCOMPARE_PREPROCESSING_COUNTER_HPP_INCLUDED
 
@@ -16,7 +24,7 @@ namespace stringcompare {
     /**
      * String multiset implemented as a map from elements to their count.
      *
-     * \note This is for pybind11 compatibility.
+     * \note This is for ease of use with pybind11.
      */
     class StringCounter {
     public:

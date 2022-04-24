@@ -1,0 +1,81 @@
+\hypertarget{classstringcompare_1_1DamerauLevenshtein}{}\doxysection{stringcompare\+::Damerau\+Levenshtein Class Reference}
+\label{classstringcompare_1_1DamerauLevenshtein}\index{stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}}
+
+
+Inheritance diagram for stringcompare\+::Damerau\+Levenshtein\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classstringcompare_1_1DamerauLevenshtein__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stringcompare\+::Damerau\+Levenshtein\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classstringcompare_1_1DamerauLevenshtein__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a93758e8d67923de25d32d012916e3831}\label{classstringcompare_1_1DamerauLevenshtein_a93758e8d67923de25d32d012916e3831}} 
+{\bfseries Damerau\+Levenshtein} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100, bool check\+\_\+bounds=true)
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}\label{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}} 
+int {\bfseries dameraulevenshtein} (const string \&s, const string \&t)
+\item 
+double \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_a07dc02d95e1bedfd0d21153242159667}{compare}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a065ae4f7eddeeaba1073e54c6b8a97c2}\label{classstringcompare_1_1DamerauLevenshtein_a065ae4f7eddeeaba1073e54c6b8a97c2}} 
+bool {\bfseries normalize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a8b8e33df7821363fce7252b946c1fd4f}\label{classstringcompare_1_1DamerauLevenshtein_a8b8e33df7821363fce7252b946c1fd4f}} 
+bool {\bfseries similarity}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_af2249b098d906870c787b4985d5174f8}\label{classstringcompare_1_1DamerauLevenshtein_af2249b098d906870c787b4985d5174f8}} 
+int {\bfseries dmat\+\_\+size}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_aa52e275348c4f48048fdd11799de8c91}\label{classstringcompare_1_1DamerauLevenshtein_aa52e275348c4f48048fdd11799de8c91}} 
+bool {\bfseries check\+\_\+bounds}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_ae82eec6ad95ad7b5a6d25c4cc1536d35}\label{classstringcompare_1_1DamerauLevenshtein_ae82eec6ad95ad7b5a6d25c4cc1536d35}} 
+Mat$<$ int $>$ {\bfseries dmat}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a07dc02d95e1bedfd0d21153242159667}\label{classstringcompare_1_1DamerauLevenshtein_a07dc02d95e1bedfd0d21153242159667}} 
+\index{stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}!compare@{compare}}
+\index{compare@{compare}!stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily double stringcompare\+::\+Damerau\+Levenshtein\+::compare (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{const string \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to comparison functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Object to compare from. \\
+\hline
+{\em t} & Object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Comparison value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}{stringcompare\+::\+Comparator$<$ string $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/stringcompare/distance/\mbox{\hyperlink{dameraulevenshtein_8h}{dameraulevenshtein.\+h}}\end{DoxyCompactItemize}

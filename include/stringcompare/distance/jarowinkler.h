@@ -1,3 +1,11 @@
+/**
+ * @file jarowinkler.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute Jaro-Winkler distance [<a href="https://en.wikipedia.org/wiki/Jaro-Winkler_distance">Wikipedia link</a>]
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_JAROWINKLER_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_JAROWINKLER_HPP_INCLUDED
 

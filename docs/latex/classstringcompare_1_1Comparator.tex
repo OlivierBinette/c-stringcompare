@@ -1,0 +1,133 @@
+\hypertarget{classstringcompare_1_1Comparator}{}\doxysection{stringcompare\+::Comparator$<$ dtype $>$ Class Template Reference}
+\label{classstringcompare_1_1Comparator}\index{stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}}
+
+
+Base class for comparators.  
+
+
+
+
+{\ttfamily \#include $<$comparator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}{compare}} (const dtype \&s, const dtype \&t)=0
+\begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classstringcompare_1_1Comparator_a1d9536f8a02c3d1a936879aba116ee00}{operator()}} (const dtype \&s, const dtype \&t)
+\begin{DoxyCompactList}\small\item\em Instances are callable for simplicity. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{classstringcompare_1_1Comparator_a1f28777d0bbbdb0d5aa13ae3acd02415}{elementwise}} (const vector$<$ dtype $>$ \&l1, const vector$<$ dtype $>$ \&l2)
+\begin{DoxyCompactList}\small\item\em Elementwise comparisons between vectors. The two vectors should be of the same size. \end{DoxyCompactList}\item 
+Mat$<$ double $>$ \mbox{\hyperlink{classstringcompare_1_1Comparator_a07c613eeb6d641419a5fe3cfef3b9d31}{pairwise}} (const vector$<$ dtype $>$ \&l1, const vector$<$ dtype $>$ \&l2)
+\begin{DoxyCompactList}\small\item\em Pairwise comparisons between the elements of two vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class dtype$>$\newline
+class stringcompare\+::\+Comparator$<$ dtype $>$}
+
+Base class for comparators. 
+
+Requires a \mbox{\hyperlink{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}{compare()}} function. Implements the callable {\ttfamily \mbox{\hyperlink{classstringcompare_1_1Comparator_a1d9536f8a02c3d1a936879aba116ee00}{operator()()}}}, and the {\ttfamily \mbox{\hyperlink{classstringcompare_1_1Comparator_a1f28777d0bbbdb0d5aa13ae3acd02415}{elementwise()}}} and {\ttfamily \mbox{\hyperlink{classstringcompare_1_1Comparator_a07c613eeb6d641419a5fe3cfef3b9d31}{pairwise()}}} functions.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em dtype} & Type of objects to compare (typically {\ttfamily string}). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}\label{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}} 
+\index{stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}!compare@{compare}}
+\index{compare@{compare}!stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily template$<$class dtype $>$ \\
+virtual double \mbox{\hyperlink{classstringcompare_1_1Comparator}{stringcompare\+::\+Comparator}}$<$ dtype $>$\+::compare (\begin{DoxyParamCaption}\item[{const dtype \&}]{s,  }\item[{const dtype \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface to comparison functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Object to compare from. \\
+\hline
+{\em t} & Object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Comparison value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classstringcompare_1_1Levenshtein_a57d5eb11de9bd6cc220814614ca564ca}{stringcompare\+::\+Levenshtein}}, \mbox{\hyperlink{classstringcompare_1_1LCSDistance_a689f945103610aec74d9f0436123943e}{stringcompare\+::\+LCSDistance}}, \mbox{\hyperlink{classstringcompare_1_1Jaccard_a8f6945d904fc6ac8b924e908ded41336}{stringcompare\+::\+Jaccard}}, \mbox{\hyperlink{classstringcompare_1_1Hamming_aeccdd35c5abe1d301653e10de661443a}{stringcompare\+::\+Hamming}}, \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_a07dc02d95e1bedfd0d21153242159667}{stringcompare\+::\+Damerau\+Levenshtein}}, and \mbox{\hyperlink{classstringcompare_1_1CharacterDifference_a4821c21e1339d65dcfd869617e3a1d55}{stringcompare\+::\+Character\+Difference}}.
+
+\mbox{\Hypertarget{classstringcompare_1_1Comparator_a1f28777d0bbbdb0d5aa13ae3acd02415}\label{classstringcompare_1_1Comparator_a1f28777d0bbbdb0d5aa13ae3acd02415}} 
+\index{stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}!elementwise@{elementwise}}
+\index{elementwise@{elementwise}!stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}}
+\doxysubsubsection{\texorpdfstring{elementwise()}{elementwise()}}
+{\footnotesize\ttfamily template$<$class dtype $>$ \\
+vector$<$double$>$ \mbox{\hyperlink{classstringcompare_1_1Comparator}{stringcompare\+::\+Comparator}}$<$ dtype $>$\+::elementwise (\begin{DoxyParamCaption}\item[{const vector$<$ dtype $>$ \&}]{l1,  }\item[{const vector$<$ dtype $>$ \&}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elementwise comparisons between vectors. The two vectors should be of the same size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l1} & Vector of elements to compare from. \\
+\hline
+{\em l2} & Vector of elements to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$double$>$ Vector of comparison values between coresponding elements in the lists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstringcompare_1_1Comparator_a1d9536f8a02c3d1a936879aba116ee00}\label{classstringcompare_1_1Comparator_a1d9536f8a02c3d1a936879aba116ee00}} 
+\index{stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class dtype $>$ \\
+double \mbox{\hyperlink{classstringcompare_1_1Comparator}{stringcompare\+::\+Comparator}}$<$ dtype $>$\+::operator() (\begin{DoxyParamCaption}\item[{const dtype \&}]{s,  }\item[{const dtype \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instances are callable for simplicity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Object to compare from. \\
+\hline
+{\em t} & Object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Comparison value between s and t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstringcompare_1_1Comparator_a07c613eeb6d641419a5fe3cfef3b9d31}\label{classstringcompare_1_1Comparator_a07c613eeb6d641419a5fe3cfef3b9d31}} 
+\index{stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}!pairwise@{pairwise}}
+\index{pairwise@{pairwise}!stringcompare::Comparator$<$ dtype $>$@{stringcompare::Comparator$<$ dtype $>$}}
+\doxysubsubsection{\texorpdfstring{pairwise()}{pairwise()}}
+{\footnotesize\ttfamily template$<$class dtype $>$ \\
+Mat$<$double$>$ \mbox{\hyperlink{classstringcompare_1_1Comparator}{stringcompare\+::\+Comparator}}$<$ dtype $>$\+::pairwise (\begin{DoxyParamCaption}\item[{const vector$<$ dtype $>$ \&}]{l1,  }\item[{const vector$<$ dtype $>$ \&}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pairwise comparisons between the elements of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l1} & Vector of elements to compare from. \\
+\hline
+{\em l2} & Vector of elements to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat$<$double$>$ Matrix of comparison values, where element (i,j) is the comparison between the first list\textquotesingle{}s ith element and the second list jth element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/stringcompare/distance/\mbox{\hyperlink{comparator_8h}{comparator.\+h}}\end{DoxyCompactItemize}

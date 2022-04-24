@@ -1,0 +1,81 @@
+\hypertarget{classstringcompare_1_1LCSDistance}{}\doxysection{stringcompare\+::LCSDistance Class Reference}
+\label{classstringcompare_1_1LCSDistance}\index{stringcompare::LCSDistance@{stringcompare::LCSDistance}}
+
+
+Inheritance diagram for stringcompare\+::LCSDistance\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classstringcompare_1_1LCSDistance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stringcompare\+::LCSDistance\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classstringcompare_1_1LCSDistance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_aae29e21b8f422e761ca6e04d70922e6d}\label{classstringcompare_1_1LCSDistance_aae29e21b8f422e761ca6e04d70922e6d}} 
+{\bfseries LCSDistance} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100, bool check\+\_\+bounds=true)
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a6c3a0c55da16c04ca4663959c656fc0d}\label{classstringcompare_1_1LCSDistance_a6c3a0c55da16c04ca4663959c656fc0d}} 
+int {\bfseries lcs} (const string \&s, const string \&t)
+\item 
+double \mbox{\hyperlink{classstringcompare_1_1LCSDistance_a689f945103610aec74d9f0436123943e}{compare}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_ad649f96a164a93a81607e5ca6c18c7b2}\label{classstringcompare_1_1LCSDistance_ad649f96a164a93a81607e5ca6c18c7b2}} 
+bool {\bfseries normalize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a1648b8235cb29f0d82aeb75cf8c17dae}\label{classstringcompare_1_1LCSDistance_a1648b8235cb29f0d82aeb75cf8c17dae}} 
+bool {\bfseries similarity}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a1dab9d2614bbed4da5a059d55d05aa8c}\label{classstringcompare_1_1LCSDistance_a1dab9d2614bbed4da5a059d55d05aa8c}} 
+int {\bfseries dmat\+\_\+size}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_ab3372a1933ee07c3c9b5ee027d320f2d}\label{classstringcompare_1_1LCSDistance_ab3372a1933ee07c3c9b5ee027d320f2d}} 
+bool {\bfseries check\+\_\+bounds}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a92baf52a634a8002d4dc801e4f627a51}\label{classstringcompare_1_1LCSDistance_a92baf52a634a8002d4dc801e4f627a51}} 
+vector$<$ int $>$ {\bfseries dmat}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a689f945103610aec74d9f0436123943e}\label{classstringcompare_1_1LCSDistance_a689f945103610aec74d9f0436123943e}} 
+\index{stringcompare::LCSDistance@{stringcompare::LCSDistance}!compare@{compare}}
+\index{compare@{compare}!stringcompare::LCSDistance@{stringcompare::LCSDistance}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily double stringcompare\+::\+LCSDistance\+::compare (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{const string \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to comparison functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Object to compare from. \\
+\hline
+{\em t} & Object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Comparison value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}{stringcompare\+::\+Comparator$<$ string $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/stringcompare/distance/\mbox{\hyperlink{lcs_8h}{lcs.\+h}}\end{DoxyCompactItemize}

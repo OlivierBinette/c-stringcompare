@@ -1,3 +1,11 @@
+/**
+ * @file characterdifference.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute character overlap between strings.
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_CHARACTERDIFFERENCE_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_CHARACTERDIFFERENCE_HPP_INCLUDED
 

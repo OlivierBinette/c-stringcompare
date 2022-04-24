@@ -1,3 +1,11 @@
+/**
+ * @file hamming.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute the Hamming distance[<a href="https://en.wikipedia.org/wiki/Hamming_distance">Wikipedia link</a>]
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_HAMMING_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_HAMMING_HPP_INCLUDED
 

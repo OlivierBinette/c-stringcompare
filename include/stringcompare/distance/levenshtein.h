@@ -1,3 +1,11 @@
+/**
+ * @file levenshtein.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute Levenshtein distance [<a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Wikipedia link</a>]
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_LEVENSHTEIN_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_LEVENSHTEIN_HPP_INCLUDED
 

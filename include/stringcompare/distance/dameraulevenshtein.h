@@ -1,3 +1,11 @@
+/**
+ * @file dameraulevenshtein.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute the Damerau-Levenshtein distance [<a href="https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance">Wikipedia link</a>].
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_DAMERAULEVENSHTEIN_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_DAMERAULEVENSHTEIN_HPP_INCLUDED
 

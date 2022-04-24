@@ -1,3 +1,11 @@
+/**
+ * @file lcs.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Compute Longest Common Substring (LCS) distance [<a href="https://en.wikipedia.org/wiki/Longest_common_substring_problem">Wikipedia link</a>]
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_DISTANCE_LCS_HPP_INCLUDED
 #define STRINGCOMPARE_DISTANCE_LCS_HPP_INCLUDED
 

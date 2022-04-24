@@ -1,0 +1,81 @@
+\hypertarget{classstringcompare_1_1Levenshtein}{}\doxysection{stringcompare\+::Levenshtein Class Reference}
+\label{classstringcompare_1_1Levenshtein}\index{stringcompare::Levenshtein@{stringcompare::Levenshtein}}
+
+
+Inheritance diagram for stringcompare\+::Levenshtein\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classstringcompare_1_1Levenshtein__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for stringcompare\+::Levenshtein\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classstringcompare_1_1Levenshtein__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a398d067370969ce8749eb98585018772}\label{classstringcompare_1_1Levenshtein_a398d067370969ce8749eb98585018772}} 
+{\bfseries Levenshtein} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100, bool check\+\_\+bounds=true)
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a85005130e493b802933737feae54f9e4}\label{classstringcompare_1_1Levenshtein_a85005130e493b802933737feae54f9e4}} 
+int {\bfseries levenshtein} (const string \&s, const string \&t)
+\item 
+double \mbox{\hyperlink{classstringcompare_1_1Levenshtein_a57d5eb11de9bd6cc220814614ca564ca}{compare}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_ad83a1e7fc810758b27a6df8f9fb3a155}\label{classstringcompare_1_1Levenshtein_ad83a1e7fc810758b27a6df8f9fb3a155}} 
+bool {\bfseries normalize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_abcde33599af8108eaf9e8ba42b1768c0}\label{classstringcompare_1_1Levenshtein_abcde33599af8108eaf9e8ba42b1768c0}} 
+bool {\bfseries similarity}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a5608ea29e3796f09147de13e23fcaa16}\label{classstringcompare_1_1Levenshtein_a5608ea29e3796f09147de13e23fcaa16}} 
+int {\bfseries dmat\+\_\+size}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a9796ce7c0394ab7a9b9a3f017fe307f7}\label{classstringcompare_1_1Levenshtein_a9796ce7c0394ab7a9b9a3f017fe307f7}} 
+bool {\bfseries check\+\_\+bounds}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_ade98a85c224e47165ef801371251649a}\label{classstringcompare_1_1Levenshtein_ade98a85c224e47165ef801371251649a}} 
+vector$<$ int $>$ {\bfseries dmat}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a57d5eb11de9bd6cc220814614ca564ca}\label{classstringcompare_1_1Levenshtein_a57d5eb11de9bd6cc220814614ca564ca}} 
+\index{stringcompare::Levenshtein@{stringcompare::Levenshtein}!compare@{compare}}
+\index{compare@{compare}!stringcompare::Levenshtein@{stringcompare::Levenshtein}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily double stringcompare\+::\+Levenshtein\+::compare (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{const string \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to comparison functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Object to compare from. \\
+\hline
+{\em t} & Object to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Comparison value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstringcompare_1_1Comparator_ab36dfa740fa17c2097ebbbdb684bc018}{stringcompare\+::\+Comparator$<$ string $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/stringcompare/distance/\mbox{\hyperlink{levenshtein_8h}{levenshtein.\+h}}\end{DoxyCompactItemize}

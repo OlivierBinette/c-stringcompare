@@ -1,0 +1,13 @@
+<map id="include/stringcompare/distance/jaccard.h" name="include/stringcompare/distance/jaccard.h">
+<area shape="rect" id="node1" title="Compute Jaccard distance (overlap between token sets) [Wikipedia link]." alt="" coords="122,5,289,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="135,169,194,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="200,244,262,271"/>
+<area shape="rect" id="node4" href="$comparator_8h.html" title="Base class for string comparison functions." alt="" coords="24,95,132,121"/>
+<area shape="rect" id="node6" href="$tokenizer_8h.html" title="Tokenize strings into token multisets." alt="" coords="268,95,468,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="24,169,110,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="287,244,362,271"/>
+<area shape="rect" id="node8" href="$counter_8h.html" title="(pybind11&#45;friendly) multiset implementation." alt="" coords="370,169,452,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="386,244,436,271"/>
+<area shape="rect" id="node10" title=" " alt="" coords="460,244,503,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="527,244,612,271"/>
+</map>

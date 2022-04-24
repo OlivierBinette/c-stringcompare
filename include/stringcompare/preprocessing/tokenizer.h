@@ -1,3 +1,11 @@
+/**
+ * @file tokenizer.h
+ * @author Olivier Binette (https://olivierbinette.ca)
+ * @brief Tokenize strings into token multisets.
+ * @date 2022-04-24
+ * 
+ */
+
 #ifndef STRINGCOMPARE_PREPROCESSING_TOKENIZER_HPP_INCLUDED
 #define STRINGCOMPARE_PREPROCESSING_TOKENIZER_HPP_INCLUDED
 
