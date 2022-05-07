@@ -19,12 +19,30 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Hamming distance between two strings.
+     * 
+     * The Hamming distance is the number of non-matching characters when comparing the strings by corresponding positions.
+     */
     class Hamming : public StringComparator {
     public:
 
         bool normalize;
         bool similarity;
 
+
+        /**
+         * @brief Construct a new Hamming object.
+         * 
+         * By default, the Hamming distance `dist` is normalized to `dist / len`, where `len` is the length of the longest string.
+         * 
+         * The (unormalized) similarity score is defined as the length of the longest string minus the Hamming distance.
+         * 
+         * The normalized similarity score is defined as 1 minus the normalized distance.
+         * 
+         * @param normalize Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false..
+         */
         Hamming(bool normalize = true, bool similarity = false) :
             normalize(normalize),
             similarity(similarity) {}

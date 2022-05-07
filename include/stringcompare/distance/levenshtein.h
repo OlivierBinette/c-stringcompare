@@ -25,19 +25,19 @@ namespace stringcompare {
         bool normalize;
         bool similarity;
         int dmat_size;
-        bool check_bounds;
         vector<int> dmat;
 
-        Levenshtein(bool normalize = true, bool similarity = false, int dmat_size = 100, bool check_bounds = true) :
+        Levenshtein(bool normalize = true, bool similarity = false, int dmat_size = 100) :
             normalize(normalize),
             similarity(similarity),
             dmat_size(dmat_size),
-            check_bounds(check_bounds),
             dmat(vector<int>(dmat_size)) {}
 
         int levenshtein(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();
+
+            dmat.reserve(m + 1);
 
             for (int i = 0; i <= m; i++) {
                 dmat[i] = i;
@@ -59,10 +59,6 @@ namespace stringcompare {
         }
 
         double compare(const string& s, const string& t) {
-            if (check_bounds) {
-                dmat.reserve(s.size() + 1);
-            }
-
             double len = s.size() + t.size();
 
             if (len == 0) {

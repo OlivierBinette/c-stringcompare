@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hamming_13',['Hamming',['../classstringcompare_1_1Hamming.html',1,'stringcompare']]],
-  ['hamming_2eh_14',['hamming.h',['../hamming_8h.html',1,'']]]
+  ['hamming_14',['Hamming',['../classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df',1,'stringcompare::Hamming::Hamming()'],['../classstringcompare_1_1Hamming.html',1,'stringcompare::Hamming']]],
+  ['hamming_2eh_15',['hamming.h',['../hamming_8h.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_28_29_65',['operator()',['../classstringcompare_1_1Comparator.html#a1d9536f8a02c3d1a936879aba116ee00',1,'stringcompare::Comparator']]]
+  ['elementwise_68',['elementwise',['../classstringcompare_1_1Comparator.html#a1f28777d0bbbdb0d5aa13ae3acd02415',1,'stringcompare::Comparator']]]
 ];

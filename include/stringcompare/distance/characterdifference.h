@@ -21,18 +21,47 @@ namespace stringcompare {
 
     template<class T>
     using Mat = vector<vector<T>>;
-
+    
+    /**
+     * @brief Compute character overlap between strings.
+     * 
+     */
     class CharacterDifference : public StringComparator {
     public:
 
         bool normalize;
         bool similarity;
 
+        /**
+         * @brief Construct a new CharacterDifference object.
+         * 
+         * Calls to operator()() and compare() return the comparison value.
+         * 
+         * Given two strings, let \f$ A \f$ and \f$ B \f$ be their character multisets. Then the CharacterDifference distance
+         * between the two strings is defined as \f$ d = |A| + |B| - 2|A \cap B| \f$.
+         * 
+         * By default, the distance is normalized to \f$ 2d / (|A| + |B| + d) \f$.
+
+         * The similarity score is defined as \f$ |A \cap B| \f$ and its normalization is 
+         * \f[
+         *     \frac{|A \cap B|}{|A| + |B| - |A \cap B|}.
+         * \f]
+         * 
+         * @param normalize Whether to normalize the difference value to be between 0 and 1. Defaults to true.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false.
+         */
         CharacterDifference(bool normalize = true, bool similarity = false) :
             normalize(normalize),
             similarity(similarity) {}
 
-        int commoncharacters(const string& s, const string& t) {
+        /**
+         * @brief Number of characters in common between two strings
+         * 
+         * @param s string to compare from.
+         * @param t string to compare to.
+         * @return int Number of characters in common.
+         */
+        static int commoncharacters(const string& s, const string& t) {
             string s1 = s;
             string s2 = t;
 

@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1DamerauLevenshtein}\index{stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}}
 
 
+Compute the Damerau-\/\+Levenshtein distance.  
+
+
+
+
+{\ttfamily \#include $<$dameraulevenshtein.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::Damerau\+Levenshtein\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,9 +30,8 @@ Collaboration diagram for stringcompare\+::Damerau\+Levenshtein\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a93758e8d67923de25d32d012916e3831}\label{classstringcompare_1_1DamerauLevenshtein_a93758e8d67923de25d32d012916e3831}} 
-{\bfseries Damerau\+Levenshtein} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100, bool check\+\_\+bounds=true)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_af4a6e0341a1da490a4c8e2cd31f6dc9d}{Damerau\+Levenshtein}} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein}{Damerau\+Levenshtein}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}\label{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}} 
 int {\bfseries dameraulevenshtein} (const string \&s, const string \&t)
 \item 
@@ -41,12 +49,42 @@ bool {\bfseries similarity}
 \mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_af2249b098d906870c787b4985d5174f8}\label{classstringcompare_1_1DamerauLevenshtein_af2249b098d906870c787b4985d5174f8}} 
 int {\bfseries dmat\+\_\+size}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_aa52e275348c4f48048fdd11799de8c91}\label{classstringcompare_1_1DamerauLevenshtein_aa52e275348c4f48048fdd11799de8c91}} 
-bool {\bfseries check\+\_\+bounds}
-\item 
 \mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_ae82eec6ad95ad7b5a6d25c4cc1536d35}\label{classstringcompare_1_1DamerauLevenshtein_ae82eec6ad95ad7b5a6d25c4cc1536d35}} 
 Mat$<$ int $>$ {\bfseries dmat}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compute the Damerau-\/\+Levenshtein distance. 
+
+This is the number of deletions, insertions, substitutions and transpositions needed to transform one string into the other. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_af4a6e0341a1da490a4c8e2cd31f6dc9d}\label{classstringcompare_1_1DamerauLevenshtein_af4a6e0341a1da490a4c8e2cd31f6dc9d}} 
+\index{stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}!DamerauLevenshtein@{DamerauLevenshtein}}
+\index{DamerauLevenshtein@{DamerauLevenshtein}!stringcompare::DamerauLevenshtein@{stringcompare::DamerauLevenshtein}}
+\doxysubsubsection{\texorpdfstring{DamerauLevenshtein()}{DamerauLevenshtein()}}
+{\footnotesize\ttfamily stringcompare\+::\+Damerau\+Levenshtein\+::\+Damerau\+Levenshtein (\begin{DoxyParamCaption}\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false},  }\item[{int}]{dmat\+\_\+size = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein}{Damerau\+Levenshtein}} object. 
+
+By default, the Damerau-\/\+Levenshtein distance {\ttfamily dist} is normalized to {\ttfamily 2 $\ast$ dist / (len + dist)}.
+
+For two strings $ s $ and $ t $, with (unnormalized) Damerau-\/\+Levenshtein distance $ \texttt{dist} $ (minimal number number of deletions, insertions, substitutions and transpositions needed to transform one string into the other), the similarity score is defined as $ \texttt{sim} = \s\+\t\ - \texttt{dist} $.
+
+The normalized similarity score is defined as 1 minus the normalized distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalize} & Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+{\em dmat\+\_\+size} & Default starting string buffer size. If the maximum string length {\ttfamily s\+\_\+max} is known in advance, this can be set to {\ttfamily s\+\_\+max + 1} to improve efficiency. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}

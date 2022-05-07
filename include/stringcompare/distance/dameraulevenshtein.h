@@ -22,25 +22,49 @@ namespace stringcompare {
     template<class T>
     using Mat = vector<vector<T>>;
 
+    /**
+     * @brief Compute the Damerau-Levenshtein distance.
+     * 
+     * This is the number of deletions, insertions, substitutions and transpositions needed to transform one string into the other.
+     * 
+     */
     class DamerauLevenshtein : public StringComparator {
     public:
 
         bool normalize;
         bool similarity;
         int dmat_size;
-        bool check_bounds;
         Mat<int> dmat;
 
-        DamerauLevenshtein(bool normalize = true, bool similarity = false, int dmat_size = 100, bool check_bounds = true) :
+        /**
+         * @brief Construct a new DamerauLevenshtein object.
+         * 
+         * By default, the Damerau-Levenshtein distance `dist` is normalized to `2 * dist / (len + dist)`.
+         * 
+         * For two strings \f$ s \f$ and \f$ t \f$, with (unnormalized) Damerau-Levenshtein distance \f$ \texttt{dist} \f$ 
+         *  (minimal number number of deletions, insertions, substitutions and transpositions needed to transform one string into the other),
+         *  the similarity score is defined as \f$ \texttt{sim} =  \s\+\t\ - \texttt{dist} \f$.
+         * 
+         * The normalized similarity score is defined as 1 minus the normalized distance.
+         * 
+         * @param normalize Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false.
+         * @param dmat_size Default starting string buffer size. If the maximum string length `s_max` is known in advance, 
+         * this can be set to `s_max + 1` to improve efficiency.
+         */
+        DamerauLevenshtein(bool normalize = true, bool similarity = false, int dmat_size = 100) :
             normalize(normalize),
             similarity(similarity),
             dmat_size(dmat_size),
-            check_bounds(check_bounds),
             dmat(Mat<int>(3, vector<int>(dmat_size))) {}
 
         int dameraulevenshtein(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();
+
+            dmat[0].reserve(m+1);
+            dmat[1].reserve(m+1);
+            dmat[2].reserve(m+1);
 
             for (int i = 0; i < dmat_size; i++) {
                 dmat[0][i] = i;
@@ -70,13 +94,6 @@ namespace stringcompare {
             int len = s.size() + t.size();
             if (len == 0) {
                 return similarity;
-            }
-
-            if (check_bounds) {
-                size_t m = max(s.size(), t.size()) + 1;
-                dmat[0].reserve(m);
-                dmat[1].reserve(m);
-                dmat[2].reserve(m);
             }
 
             double dist = dameraulevenshtein(s, t);

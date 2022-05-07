@@ -2,7 +2,17 @@
 \label{classstringcompare_1_1Hamming}\index{stringcompare::Hamming@{stringcompare::Hamming}}
 
 
-Inheritance diagram for stringcompare\+::Hamming\+:\nopagebreak
+\mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} distance between two strings.  
+
+
+
+
+{\ttfamily \#include $<$hamming.\+h$>$}
+
+
+
+Inheritance diagram for stringcompare\+::Hamming\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for stringcompare\+::Hamming\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for stringcompare\+::Hamming\+:\nopagebreak
+Collaboration diagram for stringcompare\+::Hamming\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,9 +32,8 @@ Collaboration diagram for stringcompare\+::Hamming\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1Hamming_ace84312d3371547f6ec8a423030228df}\label{classstringcompare_1_1Hamming_ace84312d3371547f6ec8a423030228df}} 
-{\bfseries Hamming} (bool normalize=true, bool similarity=false)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1Hamming_ace84312d3371547f6ec8a423030228df}{Hamming}} (bool normalize=true, bool similarity=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1Hamming_abd5d22cb799cebebfa72d5687573fb9e}\label{classstringcompare_1_1Hamming_abd5d22cb799cebebfa72d5687573fb9e}} 
 int {\bfseries hamming} (const string \&s, const string \&t)
 \item 
@@ -38,6 +48,37 @@ bool {\bfseries normalize}
 \mbox{\Hypertarget{classstringcompare_1_1Hamming_a543fa6d5937eca307c0b69a4c4b94d86}\label{classstringcompare_1_1Hamming_a543fa6d5937eca307c0b69a4c4b94d86}} 
 bool {\bfseries similarity}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} distance between two strings. 
+
+The \mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} distance is the number of non-\/matching characters when comparing the strings by corresponding positions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1Hamming_ace84312d3371547f6ec8a423030228df}\label{classstringcompare_1_1Hamming_ace84312d3371547f6ec8a423030228df}} 
+\index{stringcompare::Hamming@{stringcompare::Hamming}!Hamming@{Hamming}}
+\index{Hamming@{Hamming}!stringcompare::Hamming@{stringcompare::Hamming}}
+\doxysubsubsection{\texorpdfstring{Hamming()}{Hamming()}}
+{\footnotesize\ttfamily stringcompare\+::\+Hamming\+::\+Hamming (\begin{DoxyParamCaption}\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} object. 
+
+By default, the \mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} distance {\ttfamily dist} is normalized to {\ttfamily dist / len}, where {\ttfamily len} is the length of the longest string.
+
+The (unormalized) similarity score is defined as the length of the longest string minus the \mbox{\hyperlink{classstringcompare_1_1Hamming}{Hamming}} distance.
+
+The normalized similarity score is defined as 1 minus the normalized distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalize} & Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false.. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}

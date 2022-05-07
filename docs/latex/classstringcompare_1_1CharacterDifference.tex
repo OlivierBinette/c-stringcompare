@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1CharacterDifference}\index{stringcompare::CharacterDifference@{stringcompare::CharacterDifference}}
 
 
+Compute character overlap between strings.  
+
+
+
+
+{\ttfamily \#include $<$characterdifference.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::Character\+Difference\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,14 +30,15 @@ Collaboration diagram for stringcompare\+::Character\+Difference\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1CharacterDifference_a01ce7028ecfffca31eb6c2331774333a}\label{classstringcompare_1_1CharacterDifference_a01ce7028ecfffca31eb6c2331774333a}} 
-{\bfseries Character\+Difference} (bool normalize=true, bool similarity=false)
-\item 
-\mbox{\Hypertarget{classstringcompare_1_1CharacterDifference_a189b7543400debfe2e7a6ce516db37e6}\label{classstringcompare_1_1CharacterDifference_a189b7543400debfe2e7a6ce516db37e6}} 
-int {\bfseries commoncharacters} (const string \&s, const string \&t)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1CharacterDifference_a01ce7028ecfffca31eb6c2331774333a}{Character\+Difference}} (bool normalize=true, bool similarity=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1CharacterDifference}{Character\+Difference}} object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classstringcompare_1_1CharacterDifference_a4821c21e1339d65dcfd869617e3a1d55}{compare}} (const string \&s, const string \&t)
 \begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classstringcompare_1_1CharacterDifference_a5e769d3471a26b360f8c1b0f47c89974}{commoncharacters}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Number of characters in common between two strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,7 +50,58 @@ bool {\bfseries similarity}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Compute character overlap between strings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1CharacterDifference_a01ce7028ecfffca31eb6c2331774333a}\label{classstringcompare_1_1CharacterDifference_a01ce7028ecfffca31eb6c2331774333a}} 
+\index{stringcompare::CharacterDifference@{stringcompare::CharacterDifference}!CharacterDifference@{CharacterDifference}}
+\index{CharacterDifference@{CharacterDifference}!stringcompare::CharacterDifference@{stringcompare::CharacterDifference}}
+\doxysubsubsection{\texorpdfstring{CharacterDifference()}{CharacterDifference()}}
+{\footnotesize\ttfamily stringcompare\+::\+Character\+Difference\+::\+Character\+Difference (\begin{DoxyParamCaption}\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1CharacterDifference}{Character\+Difference}} object. 
+
+Calls to \mbox{\hyperlink{classstringcompare_1_1Comparator_a1d9536f8a02c3d1a936879aba116ee00}{operator()()}} and \mbox{\hyperlink{classstringcompare_1_1CharacterDifference_a4821c21e1339d65dcfd869617e3a1d55}{compare()}} return the comparison value.
+
+Given two strings, let $ A $ and $ B $ be their character multisets. Then the \mbox{\hyperlink{classstringcompare_1_1CharacterDifference}{Character\+Difference}} distance between the two strings is defined as $ d = |A| + |B| - 2|A \cap B| $.
+
+By default, the distance is normalized to $ 2d / (|A| + |B| + d) $.
+
+The similarity score is defined as $ |A \cap B| $ and its normalization is \[ \frac{|A \cap B|}{|A| + |B| - |A \cap B|}. \]
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalize} & Whether to normalize the difference value to be between 0 and 1. Defaults to true. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1CharacterDifference_a5e769d3471a26b360f8c1b0f47c89974}\label{classstringcompare_1_1CharacterDifference_a5e769d3471a26b360f8c1b0f47c89974}} 
+\index{stringcompare::CharacterDifference@{stringcompare::CharacterDifference}!commoncharacters@{commoncharacters}}
+\index{commoncharacters@{commoncharacters}!stringcompare::CharacterDifference@{stringcompare::CharacterDifference}}
+\doxysubsubsection{\texorpdfstring{commoncharacters()}{commoncharacters()}}
+{\footnotesize\ttfamily static int stringcompare\+::\+Character\+Difference\+::commoncharacters (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{const string \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Number of characters in common between two strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & string to compare from. \\
+\hline
+{\em t} & string to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of characters in common. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classstringcompare_1_1CharacterDifference_a4821c21e1339d65dcfd869617e3a1d55}\label{classstringcompare_1_1CharacterDifference_a4821c21e1339d65dcfd869617e3a1d55}} 
 \index{stringcompare::CharacterDifference@{stringcompare::CharacterDifference}!compare@{compare}}
 \index{compare@{compare}!stringcompare::CharacterDifference@{stringcompare::CharacterDifference}}

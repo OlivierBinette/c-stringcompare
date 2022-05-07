@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pairwise_66',['pairwise',['../classstringcompare_1_1Comparator.html#a07c613eeb6d641419a5fe3cfef3b9d31',1,'stringcompare::Comparator']]]
+  ['hamming_69',['Hamming',['../classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df',1,'stringcompare::Hamming']]]
 ];

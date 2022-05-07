@@ -1,8 +1,8 @@
 <map id="stringcompare::StringComparator" name="stringcompare::StringComparator">
 <area shape="rect" id="node1" title="Comparator for string elements." alt="" coords="255,198,493,225"/>
-<area shape="rect" id="node3" href="$classstringcompare_1_1CharacterDifference.html" title=" " alt="" coords="579,5,766,47"/>
-<area shape="rect" id="node4" href="$classstringcompare_1_1DamerauLevenshtein.html" title=" " alt="" coords="541,71,804,98"/>
-<area shape="rect" id="node5" href="$classstringcompare_1_1Hamming.html" title=" " alt="" coords="579,122,767,149"/>
+<area shape="rect" id="node3" href="$classstringcompare_1_1CharacterDifference.html" title="Compute character overlap between strings." alt="" coords="579,5,766,47"/>
+<area shape="rect" id="node4" href="$classstringcompare_1_1DamerauLevenshtein.html" title="Compute the Damerau&#45;Levenshtein distance." alt="" coords="541,71,804,98"/>
+<area shape="rect" id="node5" href="$classstringcompare_1_1Hamming.html" title="Hamming distance between two strings." alt="" coords="579,122,767,149"/>
 <area shape="rect" id="node6" href="$classstringcompare_1_1Jaccard.html" title=" " alt="" coords="587,173,758,199"/>
 <area shape="rect" id="node7" href="$classstringcompare_1_1Jaro.html" title=" " alt="" coords="598,223,747,250"/>
 <area shape="rect" id="node8" href="$classstringcompare_1_1JaroWinkler.html" title=" " alt="" coords="573,274,772,301"/>

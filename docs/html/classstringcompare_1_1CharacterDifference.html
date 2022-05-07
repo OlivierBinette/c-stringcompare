@@ -68,18 +68,24 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classstringcompare_1_1CharacterDifference-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">stringcompare::CharacterDifference Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Compute character overlap between strings.  
+ <a href="classstringcompare_1_1CharacterDifference.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="characterdifference_8h_source.html">characterdifference.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for stringcompare::CharacterDifference:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1CharacterDifference__inherit__graph.png" border="0" usemap="#astringcompare_1_1CharacterDifference_inherit__map" alt="Inheritance graph"/></div>
 <map name="astringcompare_1_1CharacterDifference_inherit__map" id="astringcompare_1_1CharacterDifference_inherit__map">
-<area shape="rect" title=" " alt="" coords="31,169,218,211"/>
+<area shape="rect" title="Compute character overlap between strings." alt="" coords="31,169,218,211"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -89,7 +95,7 @@ Collaboration diagram for stringcompare::CharacterDifference:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1CharacterDifference__coll__graph.png" border="0" usemap="#astringcompare_1_1CharacterDifference_coll__map" alt="Collaboration graph"/></div>
 <map name="astringcompare_1_1CharacterDifference_coll__map" id="astringcompare_1_1CharacterDifference_coll__map">
-<area shape="rect" title=" " alt="" coords="31,169,218,211"/>
+<area shape="rect" title="Compute character overlap between strings." alt="" coords="31,169,218,211"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -97,12 +103,9 @@ Collaboration diagram for stringcompare::CharacterDifference:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a01ce7028ecfffca31eb6c2331774333a"><td class="memItemLeft" align="right" valign="top"><a id="a01ce7028ecfffca31eb6c2331774333a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CharacterDifference</b> (bool normalize=true, bool similarity=false)</td></tr>
+<tr class="memitem:a01ce7028ecfffca31eb6c2331774333a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1CharacterDifference.html#a01ce7028ecfffca31eb6c2331774333a">CharacterDifference</a> (bool normalize=true, bool similarity=false)</td></tr>
+<tr class="memdesc:a01ce7028ecfffca31eb6c2331774333a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classstringcompare_1_1CharacterDifference.html" title="Compute character overlap between strings.">CharacterDifference</a> object.  <a href="classstringcompare_1_1CharacterDifference.html#a01ce7028ecfffca31eb6c2331774333a">More...</a><br /></td></tr>
 <tr class="separator:a01ce7028ecfffca31eb6c2331774333a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a189b7543400debfe2e7a6ce516db37e6"><td class="memItemLeft" align="right" valign="top"><a id="a189b7543400debfe2e7a6ce516db37e6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>commoncharacters</b> (const string &amp;s, const string &amp;t)</td></tr>
-<tr class="separator:a189b7543400debfe2e7a6ce516db37e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4821c21e1339d65dcfd869617e3a1d55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1CharacterDifference.html#a4821c21e1339d65dcfd869617e3a1d55">compare</a> (const string &amp;s, const string &amp;t)</td></tr>
 <tr class="memdesc:a4821c21e1339d65dcfd869617e3a1d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to comparison functions.  <a href="classstringcompare_1_1CharacterDifference.html#a4821c21e1339d65dcfd869617e3a1d55">More...</a><br /></td></tr>
 <tr class="separator:a4821c21e1339d65dcfd869617e3a1d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +120,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>commoncharacters</b> (
 <tr class="memdesc:a07c613eeb6d641419a5fe3cfef3b9d31 inherit pub_methods_classstringcompare_1_1Comparator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairwise comparisons between the elements of two vectors.  <a href="classstringcompare_1_1Comparator.html#a07c613eeb6d641419a5fe3cfef3b9d31">More...</a><br /></td></tr>
 <tr class="separator:a07c613eeb6d641419a5fe3cfef3b9d31 inherit pub_methods_classstringcompare_1_1Comparator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5e769d3471a26b360f8c1b0f47c89974"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1CharacterDifference.html#a5e769d3471a26b360f8c1b0f47c89974">commoncharacters</a> (const string &amp;s, const string &amp;t)</td></tr>
+<tr class="memdesc:a5e769d3471a26b360f8c1b0f47c89974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of characters in common between two strings.  <a href="classstringcompare_1_1CharacterDifference.html#a5e769d3471a26b360f8c1b0f47c89974">More...</a><br /></td></tr>
+<tr class="separator:a5e769d3471a26b360f8c1b0f47c89974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a443846125c14e43c1754007f8f499a77"><td class="memItemLeft" align="right" valign="top"><a id="a443846125c14e43c1754007f8f499a77"></a>
@@ -126,7 +135,107 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b></td></t
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>similarity</b></td></tr>
 <tr class="separator:aa31c24afa3cfd16ec6a5bb6d86467614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Compute character overlap between strings. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a01ce7028ecfffca31eb6c2331774333a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ce7028ecfffca31eb6c2331774333a">&#9670;&nbsp;</a></span>CharacterDifference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">stringcompare::CharacterDifference::CharacterDifference </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>similarity</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classstringcompare_1_1CharacterDifference.html" title="Compute character overlap between strings.">CharacterDifference</a> object. </p>
+<p>Calls to <a class="el" href="classstringcompare_1_1Comparator.html#a1d9536f8a02c3d1a936879aba116ee00" title="Instances are callable for simplicity.">operator()()</a> and <a class="el" href="classstringcompare_1_1CharacterDifference.html#a4821c21e1339d65dcfd869617e3a1d55" title="Interface to comparison functions.">compare()</a> return the comparison value.</p>
+<p>Given two strings, let <img class="formulaInl" alt="$ A $" src="form_2.png" width="10" height="10"/> and <img class="formulaInl" alt="$ B $" src="form_3.png" width="10" height="10"/> be their character multisets. Then the <a class="el" href="classstringcompare_1_1CharacterDifference.html" title="Compute character overlap between strings.">CharacterDifference</a> distance between the two strings is defined as <img class="formulaInl" alt="$ d = |A| + |B| - 2|A \cap B| $" src="form_6.png" width="133" height="14"/>.</p>
+<p>By default, the distance is normalized to <img class="formulaInl" alt="$ 2d / (|A| + |B| + d) $" src="form_7.png" width="98" height="14"/>.</p>
+<p>The similarity score is defined as <img class="formulaInl" alt="$ |A \cap B| $" src="form_4.png" width="39" height="14"/> and its normalization is </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{|A \cap B|}{|A| + |B| - |A \cap B|}. \]" src="form_9.png" width="109" height="31"/>
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normalize</td><td>Whether to normalize the difference value to be between 0 and 1. Defaults to true. </td></tr>
+    <tr><td class="paramname">similarity</td><td>Whether to return a similarity score rather than a distance. Defaults to false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5e769d3471a26b360f8c1b0f47c89974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e769d3471a26b360f8c1b0f47c89974">&#9670;&nbsp;</a></span>commoncharacters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int stringcompare::CharacterDifference::commoncharacters </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of characters in common between two strings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>string to compare from. </td></tr>
+    <tr><td class="paramname">t</td><td>string to compare to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of characters in common. </dd></dl>
+
+</div>
+</div>
 <a id="a4821c21e1339d65dcfd869617e3a1d55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4821c21e1339d65dcfd869617e3a1d55">&#9670;&nbsp;</a></span>compare()</h2>
 
