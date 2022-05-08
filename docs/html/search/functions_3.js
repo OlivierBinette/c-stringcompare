@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hamming_69',['Hamming',['../classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df',1,'stringcompare::Hamming']]]
+  ['fromlist_89',['fromList',['../classstringcompare_1_1StringCounter.html#ad1a38b1151a872b6f1ffcbb5c8bd649d',1,'stringcompare::StringCounter']]]
 ];

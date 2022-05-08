@@ -42,7 +42,7 @@ namespace stringcompare {
          * By default, the Damerau-Levenshtein distance `dist` is normalized to `2 * dist / (len + dist)`.
          * 
          * For two strings \f$ s \f$ and \f$ t \f$, with (unnormalized) Damerau-Levenshtein distance \f$ \texttt{dist} \f$ 
-         *  (minimal number number of deletions, insertions, substitutions and transpositions needed to transform one string into the other),
+         *  (minimal number of deletions, insertions, substitutions and transpositions needed to transform one string into the other),
          *  the similarity score is defined as \f$ \texttt{sim} =  \s\+\t\ - \texttt{dist} \f$.
          * 
          * The normalized similarity score is defined as 1 minus the normalized distance.
@@ -58,6 +58,10 @@ namespace stringcompare {
             dmat_size(dmat_size),
             dmat(Mat<int>(3, vector<int>(dmat_size))) {}
 
+
+        /**
+         * @brief raw Damerau-Levenshtein distance.
+         */
         int dameraulevenshtein(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();

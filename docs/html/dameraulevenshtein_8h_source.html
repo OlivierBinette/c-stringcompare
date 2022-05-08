@@ -101,67 +101,69 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            dmat_size(dmat_size),</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            dmat(Mat&lt;int&gt;(3, vector&lt;int&gt;(dmat_size))) {}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> dameraulevenshtein(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">int</span> m = s.size();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">int</span> n = t.size();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            dmat[0].reserve(m+1);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            dmat[1].reserve(m+1);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            dmat[2].reserve(m+1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classstringcompare_1_1DamerauLevenshtein.html#a97d557bf636f83439ff6a467cd8dcd16">   65</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classstringcompare_1_1DamerauLevenshtein.html#a97d557bf636f83439ff6a467cd8dcd16">dameraulevenshtein</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordtype">int</span> m = s.size();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">int</span> n = t.size();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dmat_size; i++) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                dmat[0][i] = i;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            dmat[0].reserve(m+1);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            dmat[1].reserve(m+1);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            dmat[2].reserve(m+1);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> cost;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                dmat[(j - 1) % 3][0] = j - 1;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                dmat[j % 3][0] = j;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= m; i++) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    cost = 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="keywordflow">if</span> (s[i - 1] != t[j - 1]) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        cost = 1;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    dmat[j % 3][i] = min({ dmat[j % 3][i - 1] + 1, dmat[(j - 1) % 3][i] +</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                            1, dmat[(j - 1) % 3][i - 1] + cost });</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordflow">if</span> ((i &gt; 1) &amp; (j &gt; 1) &amp; (s[i - 1] == t[j - 2]) &amp; (s[i - 2] == t[j - 1])) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        dmat[j % 3][i] = std::min({ dmat[j % 3][i], dmat[(j - 2) % 3][i - 2] + 1 });</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> dmat[n % 3][m];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">   93</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">compare</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">int</span> len = s.size() + t.size();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span> (len == 0) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> similarity;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordtype">double</span> dist = dameraulevenshtein(s, t);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span> (similarity) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordtype">double</span> sim = (len - dist) / 2.0;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (normalize) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    sim = sim / (len - sim);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordflow">return</span> sim;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">if</span> (normalize) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    dist = 2 * dist / (len + dist);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">return</span> dist;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    };</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STRINGCOMPARE_DISTANCE_DAMERAULEVENSHTEIN_HPP_INCLUDED</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; dmat_size; i++) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                dmat[0][i] = i;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">int</span> cost;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                dmat[(j - 1) % 3][0] = j - 1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                dmat[j % 3][0] = j;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= m; i++) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    cost = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keywordflow">if</span> (s[i - 1] != t[j - 1]) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        cost = 1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    dmat[j % 3][i] = min({ dmat[j % 3][i - 1] + 1, dmat[(j - 1) % 3][i] +</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                            1, dmat[(j - 1) % 3][i - 1] + cost });</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <span class="keywordflow">if</span> ((i &gt; 1) &amp; (j &gt; 1) &amp; (s[i - 1] == t[j - 2]) &amp; (s[i - 2] == t[j - 1])) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        dmat[j % 3][i] = std::min({ dmat[j % 3][i], dmat[(j - 2) % 3][i - 2] + 1 });</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> dmat[n % 3][m];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">   97</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">compare</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordtype">int</span> len = s.size() + t.size();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span> (len == 0) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">return</span> similarity;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">double</span> dist = dameraulevenshtein(s, t);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">if</span> (similarity) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordtype">double</span> sim = (len - dist) / 2.0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">if</span> (normalize) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    sim = sim / (len - sim);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> sim;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">if</span> (normalize) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    dist = 2 * dist / (len + dist);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> dist;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    };</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STRINGCOMPARE_DISTANCE_DAMERAULEVENSHTEIN_HPP_INCLUDED</span></div>
 <div class="ttc" id="aclassstringcompare_1_1DamerauLevenshtein_html"><div class="ttname"><a href="classstringcompare_1_1DamerauLevenshtein.html">stringcompare::DamerauLevenshtein</a></div><div class="ttdoc">Compute the Damerau-Levenshtein distance.</div><div class="ttdef"><b>Definition:</b> dameraulevenshtein.h:31</div></div>
-<div class="ttc" id="aclassstringcompare_1_1DamerauLevenshtein_html_a07dc02d95e1bedfd0d21153242159667"><div class="ttname"><a href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">stringcompare::DamerauLevenshtein::compare</a></div><div class="ttdeci">double compare(const string &amp;s, const string &amp;t)</div><div class="ttdoc">Interface to comparison functions.</div><div class="ttdef"><b>Definition:</b> dameraulevenshtein.h:93</div></div>
+<div class="ttc" id="aclassstringcompare_1_1DamerauLevenshtein_html_a07dc02d95e1bedfd0d21153242159667"><div class="ttname"><a href="classstringcompare_1_1DamerauLevenshtein.html#a07dc02d95e1bedfd0d21153242159667">stringcompare::DamerauLevenshtein::compare</a></div><div class="ttdeci">double compare(const string &amp;s, const string &amp;t)</div><div class="ttdoc">Interface to comparison functions.</div><div class="ttdef"><b>Definition:</b> dameraulevenshtein.h:97</div></div>
+<div class="ttc" id="aclassstringcompare_1_1DamerauLevenshtein_html_a97d557bf636f83439ff6a467cd8dcd16"><div class="ttname"><a href="classstringcompare_1_1DamerauLevenshtein.html#a97d557bf636f83439ff6a467cd8dcd16">stringcompare::DamerauLevenshtein::dameraulevenshtein</a></div><div class="ttdeci">int dameraulevenshtein(const string &amp;s, const string &amp;t)</div><div class="ttdoc">raw Damerau-Levenshtein distance.</div><div class="ttdef"><b>Definition:</b> dameraulevenshtein.h:65</div></div>
 <div class="ttc" id="aclassstringcompare_1_1DamerauLevenshtein_html_af4a6e0341a1da490a4c8e2cd31f6dc9d"><div class="ttname"><a href="classstringcompare_1_1DamerauLevenshtein.html#af4a6e0341a1da490a4c8e2cd31f6dc9d">stringcompare::DamerauLevenshtein::DamerauLevenshtein</a></div><div class="ttdeci">DamerauLevenshtein(bool normalize=true, bool similarity=false, int dmat_size=100)</div><div class="ttdoc">Construct a new DamerauLevenshtein object.</div><div class="ttdef"><b>Definition:</b> dameraulevenshtein.h:55</div></div>
 <div class="ttc" id="aclassstringcompare_1_1StringComparator_html"><div class="ttname"><a href="classstringcompare_1_1StringComparator.html">stringcompare::StringComparator</a></div><div class="ttdoc">Comparator for string elements.</div><div class="ttdef"><b>Definition:</b> comparator.h:101</div></div>
 <div class="ttc" id="acomparator_8h_html"><div class="ttname"><a href="comparator_8h.html">comparator.h</a></div><div class="ttdoc">Base class for string comparison functions.</div></div>

@@ -19,6 +19,10 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Jaccard distance between tokenized strings.
+     * 
+     */
     class Jaccard : public StringComparator {
     public:
 
@@ -26,9 +30,18 @@ namespace stringcompare {
         bool normalize;
         bool similarity;
 
+        /**
+         * @brief Construct a new Jaccard object.
+         * 
+         * The Jaccard distance between token bags is 1 minus their percentage of overlap.
+         * 
+         * The similarity score is the percentage of overlap.
+         * 
+         * @param tokenizer Tokenizer object.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false.
+         */
         Jaccard(Tokenizer tokenizer, bool normalize = true, bool similarity = false) :
             tokenizer(tokenizer),
-            normalize(normalize),
             similarity(similarity) {}
 
         double compare(const string& s, const string& t) {

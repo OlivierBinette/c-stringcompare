@@ -19,25 +19,48 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Longest Common Substring (LCS) distance.
+     */
     class LCSDistance : public StringComparator {
     public:
 
         bool normalize;
         bool similarity;
         int dmat_size;
-        bool check_bounds;
         vector<int> dmat;
 
-        LCSDistance(bool normalize = true, bool similarity = false, int dmat_size = 100, bool check_bounds = true) :
+        /**
+         * @brief Construct a new LCSDistance object.
+         * 
+         * The LCS distance is the sum of the lengths of the string minus twice the length of their longest common substring.
+         * 
+         * By default, the LCS distance `dist` is normalized to `2 * dist / (len + dist)`.
+         * 
+         * The (unnormalized) similarity score is defined as the length of the longest common substring. 
+         * 
+         * The normalized similarity score is 1 minus the normalized distance.
+         * 
+         * @param normalize Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false.
+         * @param dmat_size Default starting string buffer size. If the maximum string length `s_max` is known in advance, 
+         * this can be set to `s_max + 1` to improve efficiency.
+         */
+
+        LCSDistance(bool normalize = true, bool similarity = false, int dmat_size = 100) :
             normalize(normalize),
             similarity(similarity),
             dmat_size(dmat_size),
-            check_bounds(check_bounds),
             dmat(vector<int>(dmat_size)) {}
 
+        /**
+         * @brief Length of the longest common substring.
+         */
         int lcs(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();
+
+            dmat.reserve(m + 1);
 
             for (int i = 0; i < dmat_size; i++) {
                 dmat[i] = 0;
@@ -64,10 +87,6 @@ namespace stringcompare {
         }
 
         double compare(const string& s, const string& t) {
-            if (check_bounds) {
-                dmat.reserve(s.size() + 1);
-            }
-
             double len = s.size() + t.size();
             if (len == 0) {
                 return similarity;

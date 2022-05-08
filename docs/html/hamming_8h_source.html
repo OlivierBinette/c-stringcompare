@@ -90,52 +90,52 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">bool</span> normalize;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> similarity;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">   46</a></span>&#160;        <a class="code" href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">Hamming</a>(<span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>, <span class="keywordtype">bool</span> similarity = <span class="keyword">false</span>) :</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            normalize(normalize),</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            similarity(similarity) {}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> hamming(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> m = s.size();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> n = t.size();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> min_length = min(m, n);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">int</span> distance = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; min_length; i++) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                distance += (s[i] != t[i]);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            distance += max(m, n) - min_length;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> distance;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">   64</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">compare</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">double</span> len = max(s.size(), t.size());</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (len == 0) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> similarity;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">double</span> result = hamming(s, t);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">   45</a></span>&#160;        <a class="code" href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">Hamming</a>(<span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>, <span class="keywordtype">bool</span> similarity = <span class="keyword">false</span>) :</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            normalize(normalize),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            similarity(similarity) {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classstringcompare_1_1Hamming.html#af3011dd29881b52f31b5873f666ac58e">   52</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classstringcompare_1_1Hamming.html#af3011dd29881b52f31b5873f666ac58e">hamming</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> m = s.size();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">int</span> n = t.size();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">int</span> min_length = min(m, n);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">int</span> distance = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; min_length; i++) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                distance += (s[i] != t[i]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            distance += max(m, n) - min_length;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> distance;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">   66</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">compare</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; t) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">double</span> len = max(s.size(), t.size());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (len == 0) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> similarity;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (similarity) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                result = len - result;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (normalize) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                result = result / len;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">double</span> result = hamming(s, t);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (similarity) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                result = len - result;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (normalize) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                result = result / len;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    };</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STRINGCOMPARE_DISTANCE_HAMMING_HPP_INCLUDED</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STRINGCOMPARE_DISTANCE_HAMMING_HPP_INCLUDED</span></div>
 <div class="ttc" id="aclassstringcompare_1_1Hamming_html"><div class="ttname"><a href="classstringcompare_1_1Hamming.html">stringcompare::Hamming</a></div><div class="ttdoc">Hamming distance between two strings.</div><div class="ttdef"><b>Definition:</b> hamming.h:27</div></div>
-<div class="ttc" id="aclassstringcompare_1_1Hamming_html_ace84312d3371547f6ec8a423030228df"><div class="ttname"><a href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">stringcompare::Hamming::Hamming</a></div><div class="ttdeci">Hamming(bool normalize=true, bool similarity=false)</div><div class="ttdoc">Construct a new Hamming object.</div><div class="ttdef"><b>Definition:</b> hamming.h:46</div></div>
-<div class="ttc" id="aclassstringcompare_1_1Hamming_html_aeccdd35c5abe1d301653e10de661443a"><div class="ttname"><a href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">stringcompare::Hamming::compare</a></div><div class="ttdeci">double compare(const string &amp;s, const string &amp;t)</div><div class="ttdoc">Interface to comparison functions.</div><div class="ttdef"><b>Definition:</b> hamming.h:64</div></div>
+<div class="ttc" id="aclassstringcompare_1_1Hamming_html_ace84312d3371547f6ec8a423030228df"><div class="ttname"><a href="classstringcompare_1_1Hamming.html#ace84312d3371547f6ec8a423030228df">stringcompare::Hamming::Hamming</a></div><div class="ttdeci">Hamming(bool normalize=true, bool similarity=false)</div><div class="ttdoc">Construct a new Hamming object.</div><div class="ttdef"><b>Definition:</b> hamming.h:45</div></div>
+<div class="ttc" id="aclassstringcompare_1_1Hamming_html_aeccdd35c5abe1d301653e10de661443a"><div class="ttname"><a href="classstringcompare_1_1Hamming.html#aeccdd35c5abe1d301653e10de661443a">stringcompare::Hamming::compare</a></div><div class="ttdeci">double compare(const string &amp;s, const string &amp;t)</div><div class="ttdoc">Interface to comparison functions.</div><div class="ttdef"><b>Definition:</b> hamming.h:66</div></div>
+<div class="ttc" id="aclassstringcompare_1_1Hamming_html_af3011dd29881b52f31b5873f666ac58e"><div class="ttname"><a href="classstringcompare_1_1Hamming.html#af3011dd29881b52f31b5873f666ac58e">stringcompare::Hamming::hamming</a></div><div class="ttdeci">static int hamming(const string &amp;s, const string &amp;t)</div><div class="ttdoc">Raw Hamming distance.</div><div class="ttdef"><b>Definition:</b> hamming.h:52</div></div>
 <div class="ttc" id="aclassstringcompare_1_1StringComparator_html"><div class="ttname"><a href="classstringcompare_1_1StringComparator.html">stringcompare::StringComparator</a></div><div class="ttdoc">Comparator for string elements.</div><div class="ttdef"><b>Definition:</b> comparator.h:101</div></div>
 <div class="ttc" id="acomparator_8h_html"><div class="ttname"><a href="comparator_8h.html">comparator.h</a></div><div class="ttdoc">Base class for string comparison functions.</div></div>
 </div><!-- fragment --></div><!-- contents -->

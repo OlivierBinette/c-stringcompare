@@ -22,7 +22,7 @@ namespace stringcompare {
     /**
      * @brief Hamming distance between two strings.
      * 
-     * The Hamming distance is the number of non-matching characters when comparing the strings by corresponding positions.
+     * The Hamming distance is the number of sequence positions where two strings are unequal.
      */
     class Hamming : public StringComparator {
     public:
@@ -30,15 +30,14 @@ namespace stringcompare {
         bool normalize;
         bool similarity;
 
-
         /**
          * @brief Construct a new Hamming object.
          * 
-         * By default, the Hamming distance `dist` is normalized to `dist / len`, where `len` is the length of the longest string.
+         * By default, the Hamming distance `dist` (the number of sequence positions where two strings are unequal) is normalized to `dist/len`, where `len` is the length of the longest string.
          * 
          * The (unormalized) similarity score is defined as the length of the longest string minus the Hamming distance.
          * 
-         * The normalized similarity score is defined as 1 minus the normalized distance.
+         * The normalized similarity score is 1 minus the normalized distance.
          * 
          * @param normalize Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true.
          * @param similarity Whether to return a similarity score rather than a distance. Defaults to false..
@@ -47,7 +46,10 @@ namespace stringcompare {
             normalize(normalize),
             similarity(similarity) {}
 
-        int hamming(const string& s, const string& t) {
+        /**
+         * @brief Raw Hamming distance.
+         */
+        static int hamming(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();
             int min_length = min(m, n);

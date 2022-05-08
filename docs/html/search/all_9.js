@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pairwise_29',['pairwise',['../classstringcompare_1_1Comparator.html#a07c613eeb6d641419a5fe3cfef3b9d31',1,'stringcompare::Comparator']]]
+  ['ngramtokenizer_40',['NGramTokenizer',['../classstringcompare_1_1NGramTokenizer.html',1,'stringcompare']]],
+  ['numericcomparator_41',['NumericComparator',['../classstringcompare_1_1NumericComparator.html',1,'stringcompare']]]
 ];

@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1JaroWinkler}\index{stringcompare::JaroWinkler@{stringcompare::JaroWinkler}}
 
 
+Jaro-\/\+Winkler distance.  
+
+
+
+
+{\ttfamily \#include $<$jarowinkler.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::Jaro\+Winkler\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,21 +30,44 @@ Collaboration diagram for stringcompare\+::Jaro\+Winkler\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_ab28f4f64c08a8879c5d8166d44e8d2dc}\label{classstringcompare_1_1JaroWinkler_ab28f4f64c08a8879c5d8166d44e8d2dc}} 
-{\bfseries Jaro\+Winkler} (bool similarity=false)
-\item 
-\mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_ae44273a901dab32bbc3a0c94875a03ac}\label{classstringcompare_1_1JaroWinkler_ae44273a901dab32bbc3a0c94875a03ac}} 
-double {\bfseries jarowinkler} (const string \&s, const string \&t, double p=0.\+1) const
-\item 
+\mbox{\hyperlink{classstringcompare_1_1JaroWinkler_ab28f4f64c08a8879c5d8166d44e8d2dc}{Jaro\+Winkler}} (bool similarity=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1Jaro}{Jaro}} Winkler object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_aee8c08af5a54eac8ff0ca94a0655df0f}\label{classstringcompare_1_1JaroWinkler_aee8c08af5a54eac8ff0ca94a0655df0f}} 
 double {\bfseries compare} (const string \&s, const string \&t) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_afdbad01c73e831efbde2bb5665f4f3b1}\label{classstringcompare_1_1JaroWinkler_afdbad01c73e831efbde2bb5665f4f3b1}} 
+static double \mbox{\hyperlink{classstringcompare_1_1JaroWinkler_afdbad01c73e831efbde2bb5665f4f3b1}{jarowinkler}} (const string \&s, const string \&t, double p=0.\+1)
+\begin{DoxyCompactList}\small\item\em Raw Jaro-\/\+Winkler distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_a7452ad7b377056a52a0a5786f86ca2e5}\label{classstringcompare_1_1JaroWinkler_a7452ad7b377056a52a0a5786f86ca2e5}} 
 bool {\bfseries similarity}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Jaro-\/\+Winkler distance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1JaroWinkler_ab28f4f64c08a8879c5d8166d44e8d2dc}\label{classstringcompare_1_1JaroWinkler_ab28f4f64c08a8879c5d8166d44e8d2dc}} 
+\index{stringcompare::JaroWinkler@{stringcompare::JaroWinkler}!JaroWinkler@{JaroWinkler}}
+\index{JaroWinkler@{JaroWinkler}!stringcompare::JaroWinkler@{stringcompare::JaroWinkler}}
+\doxysubsubsection{\texorpdfstring{JaroWinkler()}{JaroWinkler()}}
+{\footnotesize\ttfamily stringcompare\+::\+Jaro\+Winkler\+::\+Jaro\+Winkler (\begin{DoxyParamCaption}\item[{bool}]{similarity = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1Jaro}{Jaro}} Winkler object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em similarity} & Whether or not to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

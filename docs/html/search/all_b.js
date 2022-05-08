@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tokenizer_32',['Tokenizer',['../classstringcompare_1_1Tokenizer.html',1,'stringcompare']]],
-  ['tokenizer_2eh_33',['tokenizer.h',['../tokenizer_8h.html',1,'']]]
+  ['pairwise_43',['pairwise',['../classstringcompare_1_1Comparator.html#a07c613eeb6d641419a5fe3cfef3b9d31',1,'stringcompare::Comparator']]]
 ];

@@ -19,6 +19,11 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Levenshtein distance
+     * 
+     * This is the minimal number number of deletions, insertions, and substitutions needed to transform one string into the other.
+     */
     class Levenshtein : public StringComparator {
     public:
 
@@ -27,12 +32,32 @@ namespace stringcompare {
         int dmat_size;
         vector<int> dmat;
 
+        /**
+         * @brief Construct a new Levenshtein object.
+         * 
+         * By default, the Levenshtein distance `dist` is normalized to `2 * dist / (len + dist)`.
+         * 
+         * For two strings \f$ s \f$ and \f$ t \f$, with (unnormalized) Damerau-Levenshtein distance \f$ \texttt{dist} \f$ 
+         *  (minimal number of deletions, insertions, and substitutions needed to transform one string into the other),
+         *  the similarity score is defined as \f$ \texttt{sim} =  \s\+\t\ - \texttt{dist} \f$.
+         * 
+         * The normalized similarity score is defined as 1 minus the normalized distance.
+         * 
+         * @param normalize Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true.
+         * @param similarity Whether to return a similarity score rather than a distance. Defaults to false.
+         * @param dmat_size Default starting string buffer size. If the maximum string length `s_max` is known in advance, 
+         * this can be set to `s_max + 1` to improve efficiency.
+         */
+
         Levenshtein(bool normalize = true, bool similarity = false, int dmat_size = 100) :
             normalize(normalize),
             similarity(similarity),
             dmat_size(dmat_size),
             dmat(vector<int>(dmat_size)) {}
 
+        /**
+         * @brief Raw Levenshtein distance
+         */
         int levenshtein(const string& s, const string& t) {
             int m = s.size();
             int n = t.size();

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['stringcomparator_30',['StringComparator',['../classstringcompare_1_1StringComparator.html',1,'stringcompare']]],
-  ['stringcounter_31',['StringCounter',['../classstringcompare_1_1StringCounter.html',1,'stringcompare']]]
+  ['operator_28_29_42',['operator()',['../classstringcompare_1_1Comparator.html#a1d9536f8a02c3d1a936879aba116ee00',1,'stringcompare::Comparator']]]
 ];

@@ -1,5 +1,5 @@
 <map id="stringcompare::WhitespaceTokenizer" name="stringcompare::WhitespaceTokenizer">
-<area shape="rect" id="node1" title=" " alt="" coords="17,155,217,196"/>
-<area shape="rect" id="node2" href="$classstringcompare_1_1DelimTokenizer.html" title=" " alt="" coords="5,80,229,107"/>
-<area shape="rect" id="node3" href="$classstringcompare_1_1Tokenizer.html" title=" " alt="" coords="25,5,210,32"/>
+<area shape="rect" id="node1" title="Tokenize strings by whitespace." alt="" coords="17,155,217,196"/>
+<area shape="rect" id="node2" href="$classstringcompare_1_1DelimTokenizer.html" title="Tokenize strings by a given delimiter." alt="" coords="5,80,229,107"/>
+<area shape="rect" id="node3" href="$classstringcompare_1_1Tokenizer.html" title="String tokenizer base class." alt="" coords="25,5,210,32"/>
 </map>

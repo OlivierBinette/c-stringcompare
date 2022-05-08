@@ -20,14 +20,26 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Jaro distance
+     * 
+     */
     class Jaro : public StringComparator {
     public:
 
         bool similarity;
 
+        /**
+         * @brief Construct a new Jaro object.
+         * 
+         * @param similarity Whether or not to return a similarity score rather than a distance. Defaults to false.
+         */
         explicit Jaro(bool similarity = false) :
             similarity(similarity) {}
 
+        /**
+         * @brief Raw Jaro distance.
+         */
         static double jaro(const string& s, const string& t) {
             auto ssize = s.size();
             auto tsize = t.size();

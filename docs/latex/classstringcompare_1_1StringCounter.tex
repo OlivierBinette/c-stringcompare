@@ -2,6 +2,11 @@
 \label{classstringcompare_1_1StringCounter}\index{stringcompare::StringCounter@{stringcompare::StringCounter}}
 
 
+brief String multiset implemented as a map from elements to their count.  
+
+
+
+
 {\ttfamily \#include $<$counter.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -11,32 +16,32 @@
 map$<$ string, count\+\_\+t $>$ {\bfseries get\+Dict} ()
 \item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_a0e687065f285175ffe883b99de3e62f4}\label{classstringcompare_1_1StringCounter_a0e687065f285175ffe883b99de3e62f4}} 
-count\+\_\+t {\bfseries intersection\+Count} (const \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} \&other)
-\item 
+count\+\_\+t \mbox{\hyperlink{classstringcompare_1_1StringCounter_a0e687065f285175ffe883b99de3e62f4}{intersection\+Count}} (const \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} \&other)
+\begin{DoxyCompactList}\small\item\em Size of the intersection of two bags. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_ab85d667a2ea555bed925c89c37d83c0a}\label{classstringcompare_1_1StringCounter_ab85d667a2ea555bed925c89c37d83c0a}} 
-count\+\_\+t {\bfseries union\+Count} (const \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} \&other)
-\item 
+count\+\_\+t \mbox{\hyperlink{classstringcompare_1_1StringCounter_ab85d667a2ea555bed925c89c37d83c0a}{union\+Count}} (const \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} \&other)
+\begin{DoxyCompactList}\small\item\em Size of the union of two bags. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_a7e6ab0e5023241681e7863f3f231f63b}\label{classstringcompare_1_1StringCounter_a7e6ab0e5023241681e7863f3f231f63b}} 
-void {\bfseries insert} (const string \&element)
-\item 
+void \mbox{\hyperlink{classstringcompare_1_1StringCounter_a7e6ab0e5023241681e7863f3f231f63b}{insert}} (const string \&element)
+\begin{DoxyCompactList}\small\item\em Insert one count of the given element. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_a49461a3fb3a9b65c5bb1c48389ed9836}\label{classstringcompare_1_1StringCounter_a49461a3fb3a9b65c5bb1c48389ed9836}} 
-void {\bfseries remove} (const string \&element)
-\item 
+void \mbox{\hyperlink{classstringcompare_1_1StringCounter_a49461a3fb3a9b65c5bb1c48389ed9836}{remove}} (const string \&element)
+\begin{DoxyCompactList}\small\item\em Remove one count of the given element. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_a7354e1cfc56ba19d4b8221a1bc3bbbdf}\label{classstringcompare_1_1StringCounter_a7354e1cfc56ba19d4b8221a1bc3bbbdf}} 
-set$<$ string $>$ {\bfseries elements} () const
-\item 
+set$<$ string $>$ \mbox{\hyperlink{classstringcompare_1_1StringCounter_a7354e1cfc56ba19d4b8221a1bc3bbbdf}{elements}} () const
+\begin{DoxyCompactList}\small\item\em Return set of elements. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_ab357052d1a0e2561cee60a1015bf0054}\label{classstringcompare_1_1StringCounter_ab357052d1a0e2561cee60a1015bf0054}} 
-count\+\_\+t {\bfseries total} () const
-\item 
+count\+\_\+t \mbox{\hyperlink{classstringcompare_1_1StringCounter_ab357052d1a0e2561cee60a1015bf0054}{total}} () const
+\begin{DoxyCompactList}\small\item\em Total number of elements (including multiplicity) in the Counter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_ab7b586b69dc338620d5f460858e1d577}\label{classstringcompare_1_1StringCounter_ab7b586b69dc338620d5f460858e1d577}} 
-count\+\_\+t {\bfseries unique} () const
-\end{DoxyCompactItemize}
+count\+\_\+t \mbox{\hyperlink{classstringcompare_1_1StringCounter_ab7b586b69dc338620d5f460858e1d577}{unique}} () const
+\begin{DoxyCompactList}\small\item\em Number of unique elements in the bag. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classstringcompare_1_1StringCounter_ad1a38b1151a872b6f1ffcbb5c8bd649d}\label{classstringcompare_1_1StringCounter_ad1a38b1151a872b6f1ffcbb5c8bd649d}} 
-static \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} {\bfseries from\+List} (const vector$<$ string $>$ \&vect)
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} \mbox{\hyperlink{classstringcompare_1_1StringCounter_ad1a38b1151a872b6f1ffcbb5c8bd649d}{from\+List}} (const vector$<$ string $>$ \&vect)
+\begin{DoxyCompactList}\small\item\em Construct \mbox{\hyperlink{classstringcompare_1_1StringCounter}{String\+Counter}} object from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +51,7 @@ map$<$ string, count\+\_\+t $>$ {\bfseries dict}
 
 
 \doxysubsection{Detailed Description}
-String multiset implemented as a map from elements to their count.
+brief String multiset implemented as a map from elements to their count. 
 
 \begin{DoxyNote}{Note}
 This is for ease of use with pybind11. 

@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>brief String multiset implemented as a map from elements to their count.  
+ <a href="classstringcompare_1_1StringCounter.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="counter_8h_source.html">counter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -84,31 +87,39 @@ Public Member Functions</h2></td></tr>
 map&lt; string, count_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDict</b> ()</td></tr>
 <tr class="separator:af39ad1038d35631781f770a1aa601739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e687065f285175ffe883b99de3e62f4"><td class="memItemLeft" align="right" valign="top"><a id="a0e687065f285175ffe883b99de3e62f4"></a>
-count_t&#160;</td><td class="memItemRight" valign="bottom"><b>intersectionCount</b> (const <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a> &amp;other)</td></tr>
+count_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#a0e687065f285175ffe883b99de3e62f4">intersectionCount</a> (const <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a> &amp;other)</td></tr>
+<tr class="memdesc:a0e687065f285175ffe883b99de3e62f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the intersection of two bags. <br /></td></tr>
 <tr class="separator:a0e687065f285175ffe883b99de3e62f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85d667a2ea555bed925c89c37d83c0a"><td class="memItemLeft" align="right" valign="top"><a id="ab85d667a2ea555bed925c89c37d83c0a"></a>
-count_t&#160;</td><td class="memItemRight" valign="bottom"><b>unionCount</b> (const <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a> &amp;other)</td></tr>
+count_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#ab85d667a2ea555bed925c89c37d83c0a">unionCount</a> (const <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a> &amp;other)</td></tr>
+<tr class="memdesc:ab85d667a2ea555bed925c89c37d83c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the union of two bags. <br /></td></tr>
 <tr class="separator:ab85d667a2ea555bed925c89c37d83c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e6ab0e5023241681e7863f3f231f63b"><td class="memItemLeft" align="right" valign="top"><a id="a7e6ab0e5023241681e7863f3f231f63b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (const string &amp;element)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#a7e6ab0e5023241681e7863f3f231f63b">insert</a> (const string &amp;element)</td></tr>
+<tr class="memdesc:a7e6ab0e5023241681e7863f3f231f63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert one count of the given element. <br /></td></tr>
 <tr class="separator:a7e6ab0e5023241681e7863f3f231f63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49461a3fb3a9b65c5bb1c48389ed9836"><td class="memItemLeft" align="right" valign="top"><a id="a49461a3fb3a9b65c5bb1c48389ed9836"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (const string &amp;element)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#a49461a3fb3a9b65c5bb1c48389ed9836">remove</a> (const string &amp;element)</td></tr>
+<tr class="memdesc:a49461a3fb3a9b65c5bb1c48389ed9836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove one count of the given element. <br /></td></tr>
 <tr class="separator:a49461a3fb3a9b65c5bb1c48389ed9836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7354e1cfc56ba19d4b8221a1bc3bbbdf"><td class="memItemLeft" align="right" valign="top"><a id="a7354e1cfc56ba19d4b8221a1bc3bbbdf"></a>
-set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elements</b> () const</td></tr>
+set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#a7354e1cfc56ba19d4b8221a1bc3bbbdf">elements</a> () const</td></tr>
+<tr class="memdesc:a7354e1cfc56ba19d4b8221a1bc3bbbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return set of elements. <br /></td></tr>
 <tr class="separator:a7354e1cfc56ba19d4b8221a1bc3bbbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab357052d1a0e2561cee60a1015bf0054"><td class="memItemLeft" align="right" valign="top"><a id="ab357052d1a0e2561cee60a1015bf0054"></a>
-count_t&#160;</td><td class="memItemRight" valign="bottom"><b>total</b> () const</td></tr>
+count_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#ab357052d1a0e2561cee60a1015bf0054">total</a> () const</td></tr>
+<tr class="memdesc:ab357052d1a0e2561cee60a1015bf0054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of elements (including multiplicity) in the Counter. <br /></td></tr>
 <tr class="separator:ab357052d1a0e2561cee60a1015bf0054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b586b69dc338620d5f460858e1d577"><td class="memItemLeft" align="right" valign="top"><a id="ab7b586b69dc338620d5f460858e1d577"></a>
-count_t&#160;</td><td class="memItemRight" valign="bottom"><b>unique</b> () const</td></tr>
+count_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#ab7b586b69dc338620d5f460858e1d577">unique</a> () const</td></tr>
+<tr class="memdesc:ab7b586b69dc338620d5f460858e1d577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of unique elements in the bag. <br /></td></tr>
 <tr class="separator:ab7b586b69dc338620d5f460858e1d577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1a38b1151a872b6f1ffcbb5c8bd649d"><td class="memItemLeft" align="right" valign="top"><a id="ad1a38b1151a872b6f1ffcbb5c8bd649d"></a>
-static <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fromList</b> (const vector&lt; string &gt; &amp;vect)</td></tr>
+static <a class="el" href="classstringcompare_1_1StringCounter.html">StringCounter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1StringCounter.html#ad1a38b1151a872b6f1ffcbb5c8bd649d">fromList</a> (const vector&lt; string &gt; &amp;vect)</td></tr>
+<tr class="memdesc:ad1a38b1151a872b6f1ffcbb5c8bd649d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classstringcompare_1_1StringCounter.html" title="brief String multiset implemented as a map from elements to their count.">StringCounter</a> object from a list. <br /></td></tr>
 <tr class="separator:ad1a38b1151a872b6f1ffcbb5c8bd649d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -118,7 +129,7 @@ map&lt; string, count_t &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="separator:a07c44a38042f4c2d2613e05f86f68f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>String multiset implemented as a map from elements to their count.</p>
+<div class="textblock"><p>brief String multiset implemented as a map from elements to their count. </p>
 <dl class="section note"><dt>Note</dt><dd>This is for ease of use with pybind11. </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/stringcompare/preprocessing/<a class="el" href="counter_8h_source.html">counter.h</a></li>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['whitespacetokenizer_34',['WhitespaceTokenizer',['../classstringcompare_1_1WhitespaceTokenizer.html',1,'stringcompare']]]
+  ['remove_44',['remove',['../classstringcompare_1_1StringCounter.html#a49461a3fb3a9b65c5bb1c48389ed9836',1,'stringcompare::StringCounter']]]
 ];

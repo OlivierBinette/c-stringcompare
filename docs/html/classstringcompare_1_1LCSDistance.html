@@ -74,12 +74,17 @@ $(function() {
 <div class="title">stringcompare::LCSDistance Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Longest Common Substring (LCS) distance.  
+ <a href="classstringcompare_1_1LCSDistance.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lcs_8h_source.html">lcs.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for stringcompare::LCSDistance:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1LCSDistance__inherit__graph.png" border="0" usemap="#astringcompare_1_1LCSDistance_inherit__map" alt="Inheritance graph"/></div>
 <map name="astringcompare_1_1LCSDistance_inherit__map" id="astringcompare_1_1LCSDistance_inherit__map">
-<area shape="rect" title=" " alt="" coords="22,169,227,196"/>
+<area shape="rect" title="Longest Common Substring (LCS) distance." alt="" coords="22,169,227,196"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -89,7 +94,7 @@ Collaboration diagram for stringcompare::LCSDistance:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1LCSDistance__coll__graph.png" border="0" usemap="#astringcompare_1_1LCSDistance_coll__map" alt="Collaboration graph"/></div>
 <map name="astringcompare_1_1LCSDistance_coll__map" id="astringcompare_1_1LCSDistance_coll__map">
-<area shape="rect" title=" " alt="" coords="22,169,227,196"/>
+<area shape="rect" title="Longest Common Substring (LCS) distance." alt="" coords="22,169,227,196"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -97,11 +102,12 @@ Collaboration diagram for stringcompare::LCSDistance:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae29e21b8f422e761ca6e04d70922e6d"><td class="memItemLeft" align="right" valign="top"><a id="aae29e21b8f422e761ca6e04d70922e6d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LCSDistance</b> (bool normalize=true, bool similarity=false, int dmat_size=100, bool check_bounds=true)</td></tr>
-<tr class="separator:aae29e21b8f422e761ca6e04d70922e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb2539555c274de01140a15351b11bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1LCSDistance.html#a0bb2539555c274de01140a15351b11bc">LCSDistance</a> (bool normalize=true, bool similarity=false, int dmat_size=100)</td></tr>
+<tr class="memdesc:a0bb2539555c274de01140a15351b11bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classstringcompare_1_1LCSDistance.html" title="Longest Common Substring (LCS) distance.">LCSDistance</a> object.  <a href="classstringcompare_1_1LCSDistance.html#a0bb2539555c274de01140a15351b11bc">More...</a><br /></td></tr>
+<tr class="separator:a0bb2539555c274de01140a15351b11bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c3a0c55da16c04ca4663959c656fc0d"><td class="memItemLeft" align="right" valign="top"><a id="a6c3a0c55da16c04ca4663959c656fc0d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>lcs</b> (const string &amp;s, const string &amp;t)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1LCSDistance.html#a6c3a0c55da16c04ca4663959c656fc0d">lcs</a> (const string &amp;s, const string &amp;t)</td></tr>
+<tr class="memdesc:a6c3a0c55da16c04ca4663959c656fc0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the longest common substring. <br /></td></tr>
 <tr class="separator:a6c3a0c55da16c04ca4663959c656fc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a689f945103610aec74d9f0436123943e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1LCSDistance.html#a689f945103610aec74d9f0436123943e">compare</a> (const string &amp;s, const string &amp;t)</td></tr>
 <tr class="memdesc:a689f945103610aec74d9f0436123943e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to comparison functions.  <a href="classstringcompare_1_1LCSDistance.html#a689f945103610aec74d9f0436123943e">More...</a><br /></td></tr>
@@ -128,13 +134,69 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>similarity</b></td></
 <tr class="memitem:a1dab9d2614bbed4da5a059d55d05aa8c"><td class="memItemLeft" align="right" valign="top"><a id="a1dab9d2614bbed4da5a059d55d05aa8c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>dmat_size</b></td></tr>
 <tr class="separator:a1dab9d2614bbed4da5a059d55d05aa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3372a1933ee07c3c9b5ee027d320f2d"><td class="memItemLeft" align="right" valign="top"><a id="ab3372a1933ee07c3c9b5ee027d320f2d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_bounds</b></td></tr>
-<tr class="separator:ab3372a1933ee07c3c9b5ee027d320f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92baf52a634a8002d4dc801e4f627a51"><td class="memItemLeft" align="right" valign="top"><a id="a92baf52a634a8002d4dc801e4f627a51"></a>
 vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dmat</b></td></tr>
 <tr class="separator:a92baf52a634a8002d4dc801e4f627a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Longest Common Substring (LCS) distance. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0bb2539555c274de01140a15351b11bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb2539555c274de01140a15351b11bc">&#9670;&nbsp;</a></span>LCSDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">stringcompare::LCSDistance::LCSDistance </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>similarity</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dmat_size</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classstringcompare_1_1LCSDistance.html" title="Longest Common Substring (LCS) distance.">LCSDistance</a> object. </p>
+<p>The LCS distance is the sum of the lengths of the string minus twice the length of their longest common substring.</p>
+<p>By default, the LCS distance <code>dist</code> is normalized to <code>2 * dist / (len + dist)</code>.</p>
+<p>The (unnormalized) similarity score is defined as the length of the longest common substring.</p>
+<p>The normalized similarity score is 1 minus the normalized distance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normalize</td><td>Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true. </td></tr>
+    <tr><td class="paramname">similarity</td><td>Whether to return a similarity score rather than a distance. Defaults to false. </td></tr>
+    <tr><td class="paramname">dmat_size</td><td>Default starting string buffer size. If the maximum string length <code>s_max</code> is known in advance, this can be set to <code>s_max + 1</code> to improve efficiency. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a689f945103610aec74d9f0436123943e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a689f945103610aec74d9f0436123943e">&#9670;&nbsp;</a></span>compare()</h2>

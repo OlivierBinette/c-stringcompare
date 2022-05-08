@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1Jaccard}\index{stringcompare::Jaccard@{stringcompare::Jaccard}}
 
 
+\mbox{\hyperlink{classstringcompare_1_1Jaccard}{Jaccard}} distance between tokenized strings.  
+
+
+
+
+{\ttfamily \#include $<$jaccard.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::Jaccard\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -11,7 +20,8 @@ Inheritance diagram for stringcompare\+::Jaccard\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for stringcompare\+::Jaccard\+:\nopagebreak
+Collaboration diagram for stringcompare\+::Jaccard\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,9 +31,8 @@ Collaboration diagram for stringcompare\+::Jaccard\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1Jaccard_a49a2ba2a6e423eb4334ddab820c67ba4}\label{classstringcompare_1_1Jaccard_a49a2ba2a6e423eb4334ddab820c67ba4}} 
-{\bfseries Jaccard} (\mbox{\hyperlink{classstringcompare_1_1Tokenizer}{Tokenizer}} tokenizer, bool normalize=true, bool similarity=false)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1Jaccard_a49a2ba2a6e423eb4334ddab820c67ba4}{Jaccard}} (\mbox{\hyperlink{classstringcompare_1_1Tokenizer}{Tokenizer}} tokenizer, bool normalize=true, bool similarity=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1Jaccard}{Jaccard}} object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classstringcompare_1_1Jaccard_a8f6945d904fc6ac8b924e908ded41336}{compare}} (const string \&s, const string \&t)
 \begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -38,6 +47,33 @@ bool {\bfseries normalize}
 \mbox{\Hypertarget{classstringcompare_1_1Jaccard_a13e3bd8303139f6665701a9f69b3adc6}\label{classstringcompare_1_1Jaccard_a13e3bd8303139f6665701a9f69b3adc6}} 
 bool {\bfseries similarity}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classstringcompare_1_1Jaccard}{Jaccard}} distance between tokenized strings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1Jaccard_a49a2ba2a6e423eb4334ddab820c67ba4}\label{classstringcompare_1_1Jaccard_a49a2ba2a6e423eb4334ddab820c67ba4}} 
+\index{stringcompare::Jaccard@{stringcompare::Jaccard}!Jaccard@{Jaccard}}
+\index{Jaccard@{Jaccard}!stringcompare::Jaccard@{stringcompare::Jaccard}}
+\doxysubsubsection{\texorpdfstring{Jaccard()}{Jaccard()}}
+{\footnotesize\ttfamily stringcompare\+::\+Jaccard\+::\+Jaccard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstringcompare_1_1Tokenizer}{Tokenizer}}}]{tokenizer,  }\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1Jaccard}{Jaccard}} object. 
+
+The \mbox{\hyperlink{classstringcompare_1_1Jaccard}{Jaccard}} distance between token bags is 1 minus their percentage of overlap.
+
+The similarity score is the percentage of overlap.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokenizer} & \mbox{\hyperlink{classstringcompare_1_1Tokenizer}{Tokenizer}} object. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}

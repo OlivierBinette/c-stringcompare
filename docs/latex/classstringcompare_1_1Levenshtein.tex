@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1Levenshtein}\index{stringcompare::Levenshtein@{stringcompare::Levenshtein}}
 
 
+\mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} distance.  
+
+
+
+
+{\ttfamily \#include $<$levenshtein.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::Levenshtein\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,12 +30,11 @@ Collaboration diagram for stringcompare\+::Levenshtein\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_aac517c7b141e29b28304faed5bdfce82}\label{classstringcompare_1_1Levenshtein_aac517c7b141e29b28304faed5bdfce82}} 
-{\bfseries Levenshtein} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1Levenshtein_aac517c7b141e29b28304faed5bdfce82}{Levenshtein}} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1Levenshtein_a85005130e493b802933737feae54f9e4}\label{classstringcompare_1_1Levenshtein_a85005130e493b802933737feae54f9e4}} 
-int {\bfseries levenshtein} (const string \&s, const string \&t)
-\item 
+int \mbox{\hyperlink{classstringcompare_1_1Levenshtein_a85005130e493b802933737feae54f9e4}{levenshtein}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Raw \mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} distance. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classstringcompare_1_1Levenshtein_a57d5eb11de9bd6cc220814614ca564ca}{compare}} (const string \&s, const string \&t)
 \begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -44,6 +52,39 @@ int {\bfseries dmat\+\_\+size}
 \mbox{\Hypertarget{classstringcompare_1_1Levenshtein_ade98a85c224e47165ef801371251649a}\label{classstringcompare_1_1Levenshtein_ade98a85c224e47165ef801371251649a}} 
 vector$<$ int $>$ {\bfseries dmat}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} distance. 
+
+This is the minimal number number of deletions, insertions, and substitutions needed to transform one string into the other. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1Levenshtein_aac517c7b141e29b28304faed5bdfce82}\label{classstringcompare_1_1Levenshtein_aac517c7b141e29b28304faed5bdfce82}} 
+\index{stringcompare::Levenshtein@{stringcompare::Levenshtein}!Levenshtein@{Levenshtein}}
+\index{Levenshtein@{Levenshtein}!stringcompare::Levenshtein@{stringcompare::Levenshtein}}
+\doxysubsubsection{\texorpdfstring{Levenshtein()}{Levenshtein()}}
+{\footnotesize\ttfamily stringcompare\+::\+Levenshtein\+::\+Levenshtein (\begin{DoxyParamCaption}\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false},  }\item[{int}]{dmat\+\_\+size = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} object. 
+
+By default, the \mbox{\hyperlink{classstringcompare_1_1Levenshtein}{Levenshtein}} distance {\ttfamily dist} is normalized to {\ttfamily 2 $\ast$ dist / (len + dist)}.
+
+For two strings $ s $ and $ t $, with (unnormalized) Damerau-\/\+Levenshtein distance $ \texttt{dist} $ (minimal number of deletions, insertions, and substitutions needed to transform one string into the other), the similarity score is defined as $ \texttt{sim} = \s\+\t\ - \texttt{dist} $.
+
+The normalized similarity score is defined as 1 minus the normalized distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalize} & Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+{\em dmat\+\_\+size} & Default starting string buffer size. If the maximum string length {\ttfamily s\+\_\+max} is known in advance, this can be set to {\ttfamily s\+\_\+max + 1} to improve efficiency. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}

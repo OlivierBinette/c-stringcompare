@@ -68,18 +68,24 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classstringcompare_1_1JaroWinkler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">stringcompare::JaroWinkler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Jaro-Winkler distance.  
+ <a href="classstringcompare_1_1JaroWinkler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="jarowinkler_8h_source.html">jarowinkler.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for stringcompare::JaroWinkler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1JaroWinkler__inherit__graph.png" border="0" usemap="#astringcompare_1_1JaroWinkler_inherit__map" alt="Inheritance graph"/></div>
 <map name="astringcompare_1_1JaroWinkler_inherit__map" id="astringcompare_1_1JaroWinkler_inherit__map">
-<area shape="rect" title=" " alt="" coords="25,169,224,196"/>
+<area shape="rect" title="Jaro&#45;Winkler distance." alt="" coords="25,169,224,196"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -89,7 +95,7 @@ Collaboration diagram for stringcompare::JaroWinkler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstringcompare_1_1JaroWinkler__coll__graph.png" border="0" usemap="#astringcompare_1_1JaroWinkler_coll__map" alt="Collaboration graph"/></div>
 <map name="astringcompare_1_1JaroWinkler_coll__map" id="astringcompare_1_1JaroWinkler_coll__map">
-<area shape="rect" title=" " alt="" coords="25,169,224,196"/>
+<area shape="rect" title="Jaro&#45;Winkler distance." alt="" coords="25,169,224,196"/>
 <area shape="rect" href="classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,95,244,121"/>
 <area shape="rect" href="classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
 </map>
@@ -97,12 +103,9 @@ Collaboration diagram for stringcompare::JaroWinkler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab28f4f64c08a8879c5d8166d44e8d2dc"><td class="memItemLeft" align="right" valign="top"><a id="ab28f4f64c08a8879c5d8166d44e8d2dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>JaroWinkler</b> (bool similarity=false)</td></tr>
+<tr class="memitem:ab28f4f64c08a8879c5d8166d44e8d2dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1JaroWinkler.html#ab28f4f64c08a8879c5d8166d44e8d2dc">JaroWinkler</a> (bool similarity=false)</td></tr>
+<tr class="memdesc:ab28f4f64c08a8879c5d8166d44e8d2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classstringcompare_1_1Jaro.html" title="Jaro distance.">Jaro</a> Winkler object.  <a href="classstringcompare_1_1JaroWinkler.html#ab28f4f64c08a8879c5d8166d44e8d2dc">More...</a><br /></td></tr>
 <tr class="separator:ab28f4f64c08a8879c5d8166d44e8d2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae44273a901dab32bbc3a0c94875a03ac"><td class="memItemLeft" align="right" valign="top"><a id="ae44273a901dab32bbc3a0c94875a03ac"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>jarowinkler</b> (const string &amp;s, const string &amp;t, double p=0.1) const</td></tr>
-<tr class="separator:ae44273a901dab32bbc3a0c94875a03ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee8c08af5a54eac8ff0ca94a0655df0f"><td class="memItemLeft" align="right" valign="top"><a id="aee8c08af5a54eac8ff0ca94a0655df0f"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>compare</b> (const string &amp;s, const string &amp;t) const</td></tr>
 <tr class="separator:aee8c08af5a54eac8ff0ca94a0655df0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,12 +123,56 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>compare</b> (const 
 <tr class="memdesc:a07c613eeb6d641419a5fe3cfef3b9d31 inherit pub_methods_classstringcompare_1_1Comparator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairwise comparisons between the elements of two vectors.  <a href="classstringcompare_1_1Comparator.html#a07c613eeb6d641419a5fe3cfef3b9d31">More...</a><br /></td></tr>
 <tr class="separator:a07c613eeb6d641419a5fe3cfef3b9d31 inherit pub_methods_classstringcompare_1_1Comparator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:afdbad01c73e831efbde2bb5665f4f3b1"><td class="memItemLeft" align="right" valign="top"><a id="afdbad01c73e831efbde2bb5665f4f3b1"></a>
+static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstringcompare_1_1JaroWinkler.html#afdbad01c73e831efbde2bb5665f4f3b1">jarowinkler</a> (const string &amp;s, const string &amp;t, double p=0.1)</td></tr>
+<tr class="memdesc:afdbad01c73e831efbde2bb5665f4f3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw Jaro-Winkler distance. <br /></td></tr>
+<tr class="separator:afdbad01c73e831efbde2bb5665f4f3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7452ad7b377056a52a0a5786f86ca2e5"><td class="memItemLeft" align="right" valign="top"><a id="a7452ad7b377056a52a0a5786f86ca2e5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>similarity</b></td></tr>
 <tr class="separator:a7452ad7b377056a52a0a5786f86ca2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Jaro-Winkler distance. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab28f4f64c08a8879c5d8166d44e8d2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28f4f64c08a8879c5d8166d44e8d2dc">&#9670;&nbsp;</a></span>JaroWinkler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">stringcompare::JaroWinkler::JaroWinkler </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>similarity</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classstringcompare_1_1Jaro.html" title="Jaro distance.">Jaro</a> Winkler object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">similarity</td><td>Whether or not to return a similarity score rather than a distance. Defaults to false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/stringcompare/distance/<a class="el" href="jarowinkler_8h_source.html">jarowinkler.h</a></li>
 </ul>

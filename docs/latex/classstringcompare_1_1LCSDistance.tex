@@ -2,6 +2,15 @@
 \label{classstringcompare_1_1LCSDistance}\index{stringcompare::LCSDistance@{stringcompare::LCSDistance}}
 
 
+Longest Common Substring (LCS) distance.  
+
+
+
+
+{\ttfamily \#include $<$lcs.\+h$>$}
+
+
+
 Inheritance diagram for stringcompare\+::LCSDistance\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,12 +30,11 @@ Collaboration diagram for stringcompare\+::LCSDistance\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_aae29e21b8f422e761ca6e04d70922e6d}\label{classstringcompare_1_1LCSDistance_aae29e21b8f422e761ca6e04d70922e6d}} 
-{\bfseries LCSDistance} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100, bool check\+\_\+bounds=true)
-\item 
+\mbox{\hyperlink{classstringcompare_1_1LCSDistance_a0bb2539555c274de01140a15351b11bc}{LCSDistance}} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1LCSDistance}{LCSDistance}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a6c3a0c55da16c04ca4663959c656fc0d}\label{classstringcompare_1_1LCSDistance_a6c3a0c55da16c04ca4663959c656fc0d}} 
-int {\bfseries lcs} (const string \&s, const string \&t)
-\item 
+int \mbox{\hyperlink{classstringcompare_1_1LCSDistance_a6c3a0c55da16c04ca4663959c656fc0d}{lcs}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em Length of the longest common substring. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classstringcompare_1_1LCSDistance_a689f945103610aec74d9f0436123943e}{compare}} (const string \&s, const string \&t)
 \begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -41,12 +49,42 @@ bool {\bfseries similarity}
 \mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a1dab9d2614bbed4da5a059d55d05aa8c}\label{classstringcompare_1_1LCSDistance_a1dab9d2614bbed4da5a059d55d05aa8c}} 
 int {\bfseries dmat\+\_\+size}
 \item 
-\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_ab3372a1933ee07c3c9b5ee027d320f2d}\label{classstringcompare_1_1LCSDistance_ab3372a1933ee07c3c9b5ee027d320f2d}} 
-bool {\bfseries check\+\_\+bounds}
-\item 
 \mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a92baf52a634a8002d4dc801e4f627a51}\label{classstringcompare_1_1LCSDistance_a92baf52a634a8002d4dc801e4f627a51}} 
 vector$<$ int $>$ {\bfseries dmat}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Longest Common Substring (LCS) distance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstringcompare_1_1LCSDistance_a0bb2539555c274de01140a15351b11bc}\label{classstringcompare_1_1LCSDistance_a0bb2539555c274de01140a15351b11bc}} 
+\index{stringcompare::LCSDistance@{stringcompare::LCSDistance}!LCSDistance@{LCSDistance}}
+\index{LCSDistance@{LCSDistance}!stringcompare::LCSDistance@{stringcompare::LCSDistance}}
+\doxysubsubsection{\texorpdfstring{LCSDistance()}{LCSDistance()}}
+{\footnotesize\ttfamily stringcompare\+::\+LCSDistance\+::\+LCSDistance (\begin{DoxyParamCaption}\item[{bool}]{normalize = {\ttfamily true},  }\item[{bool}]{similarity = {\ttfamily false},  }\item[{int}]{dmat\+\_\+size = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classstringcompare_1_1LCSDistance}{LCSDistance}} object. 
+
+The LCS distance is the sum of the lengths of the string minus twice the length of their longest common substring.
+
+By default, the LCS distance {\ttfamily dist} is normalized to {\ttfamily 2 $\ast$ dist / (len + dist)}.
+
+The (unnormalized) similarity score is defined as the length of the longest common substring.
+
+The normalized similarity score is 1 minus the normalized distance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em normalize} & Whether to normalize the distance/similarity to be between 0 and 1. Defaults to true. \\
+\hline
+{\em similarity} & Whether to return a similarity score rather than a distance. Defaults to false. \\
+\hline
+{\em dmat\+\_\+size} & Default starting string buffer size. If the maximum string length {\ttfamily s\+\_\+max} is known in advance, this can be set to {\ttfamily s\+\_\+max + 1} to improve efficiency. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}

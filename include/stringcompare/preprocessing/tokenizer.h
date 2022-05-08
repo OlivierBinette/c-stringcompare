@@ -18,6 +18,10 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief String tokenizer base class.
+     * 
+     */
     class Tokenizer {
     public:
 
@@ -41,6 +45,9 @@ namespace stringcompare {
 
     };
 
+    /**
+     * @brief Tokenize strings by a given delimiter.
+     */
     class DelimTokenizer : public Tokenizer {
     public:
 
@@ -77,11 +84,17 @@ namespace stringcompare {
         }
     };
 
+    /**
+     * @brief Tokenize strings by whitespace.
+     */
     class WhitespaceTokenizer : public DelimTokenizer {
     public:
         WhitespaceTokenizer() : DelimTokenizer(" ") {}
     };
 
+    /**
+     * @brief Tokenize strings by sequential n-grams.
+     */
     class NGramTokenizer : public Tokenizer {
     public:
 

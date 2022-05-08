@@ -19,15 +19,26 @@ using namespace std;
 
 namespace stringcompare {
 
+    /**
+     * @brief Jaro-Winkler distance
+     */
     class JaroWinkler : public StringComparator {
     public:
 
         bool similarity;
 
+        /**
+         * @brief Construct a new Jaro Winkler object
+         * 
+         * @param similarity Whether or not to return a similarity score rather than a distance. Defaults to false.
+         */
         explicit JaroWinkler(bool similarity = false) :
             similarity(similarity) {}
 
-        double jarowinkler(const string& s, const string& t, double p = 0.1) const {
+        /**
+         * @brief Raw Jaro-Winkler distance.
+         */
+        static double jarowinkler(const string& s, const string& t, double p = 0.1) {
             int ell = 0;
             for (size_t i = 0; i < min({ s.size(), t.size(), size_t(4) }); i++) {
                 if (s[i] == t[i]) {

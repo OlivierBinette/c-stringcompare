@@ -1,6 +1,6 @@
 <map id="stringcompare::Jaccard" name="stringcompare::Jaccard">
-<area shape="rect" id="node1" title=" " alt="" coords="215,185,386,212"/>
+<area shape="rect" id="node1" title="Jaccard distance between tokenized strings." alt="" coords="215,185,386,212"/>
 <area shape="rect" id="node2" href="$classstringcompare_1_1StringComparator.html" title="Comparator for string elements." alt="" coords="5,96,244,123"/>
 <area shape="rect" id="node3" href="$classstringcompare_1_1Comparator.html" title=" " alt="" coords="24,5,225,47"/>
-<area shape="rect" id="node4" href="$classstringcompare_1_1Tokenizer.html" title=" " alt="" coords="268,96,453,123"/>
+<area shape="rect" id="node4" href="$classstringcompare_1_1Tokenizer.html" title="String tokenizer base class." alt="" coords="268,96,453,123"/>
 </map>

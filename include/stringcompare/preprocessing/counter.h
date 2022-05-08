@@ -22,7 +22,7 @@ namespace stringcompare {
     typedef unsigned long int count_t;
 
     /**
-     * String multiset implemented as a map from elements to their count.
+     * @brief brief String multiset implemented as a map from elements to their count.
      *
      * \note This is for ease of use with pybind11.
      */
@@ -36,6 +36,9 @@ namespace stringcompare {
             return this->dict;
         }
 
+        /**
+         * @brief Size of the intersection of two bags.
+         */
         count_t intersectionCount(const StringCounter& other) {
 
             // Swap `this` and `other` for efficiency, if needed.
@@ -68,10 +71,16 @@ namespace stringcompare {
             }
         }
 
+        /**
+         * @brief Size of the union of two bags.
+         */
         count_t unionCount(const StringCounter& other) {
             return this->total() + other.total() - this->intersectionCount(other);
         }
 
+        /**
+         * @brief Insert one count of the given element.
+         */
         void insert(const string& element) {
             auto it = dict.find(element);
             if (it != dict.end()) {
@@ -82,6 +91,9 @@ namespace stringcompare {
             }
         }
 
+        /**
+         * @brief Remove one count of the given element.
+         */
         void remove(const string& element) {
             auto it = dict.find(element);
             if (it != dict.end()) {
@@ -94,6 +106,9 @@ namespace stringcompare {
             }
         }
 
+        /**
+         * @brief Return set of elements.
+         */
         set<string> elements() const {
             set<string> result;
             for (auto it = dict.begin(); it != dict.end(); it++) {
@@ -103,6 +118,9 @@ namespace stringcompare {
             return result;
         }
 
+        /**
+         * @brief Total number of elements (including multiplicity) in the Counter.
+         */
         count_t total() const {
             int total = 0;
             for (auto it = dict.begin(); it != dict.end(); it++) {
@@ -112,10 +130,16 @@ namespace stringcompare {
             return total;
         }
 
+        /**
+         * @brief Number of unique elements in the bag.
+         */
         count_t unique() const {
             return dict.size();
         }
 
+        /**
+         * @brief Construct StringCounter object from a list.
+         */
         static StringCounter fromList(const vector<string>& vect) {
             StringCounter result;
             for (auto it = vect.begin(); it != vect.end(); it++) {

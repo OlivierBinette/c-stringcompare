@@ -33,8 +33,8 @@ Collaboration diagram for stringcompare\+::Damerau\+Levenshtein\+:\nopagebreak
 \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_af4a6e0341a1da490a4c8e2cd31f6dc9d}{Damerau\+Levenshtein}} (bool normalize=true, bool similarity=false, int dmat\+\_\+size=100)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein}{Damerau\+Levenshtein}} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}\label{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}} 
-int {\bfseries dameraulevenshtein} (const string \&s, const string \&t)
-\item 
+int \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_a97d557bf636f83439ff6a467cd8dcd16}{dameraulevenshtein}} (const string \&s, const string \&t)
+\begin{DoxyCompactList}\small\item\em raw Damerau-\/\+Levenshtein distance. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein_a07dc02d95e1bedfd0d21153242159667}{compare}} (const string \&s, const string \&t)
 \begin{DoxyCompactList}\small\item\em Interface to comparison functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -72,7 +72,7 @@ Construct a new \mbox{\hyperlink{classstringcompare_1_1DamerauLevenshtein}{Damer
 
 By default, the Damerau-\/\+Levenshtein distance {\ttfamily dist} is normalized to {\ttfamily 2 $\ast$ dist / (len + dist)}.
 
-For two strings $ s $ and $ t $, with (unnormalized) Damerau-\/\+Levenshtein distance $ \texttt{dist} $ (minimal number number of deletions, insertions, substitutions and transpositions needed to transform one string into the other), the similarity score is defined as $ \texttt{sim} = \s\+\t\ - \texttt{dist} $.
+For two strings $ s $ and $ t $, with (unnormalized) Damerau-\/\+Levenshtein distance $ \texttt{dist} $ (minimal number of deletions, insertions, substitutions and transpositions needed to transform one string into the other), the similarity score is defined as $ \texttt{sim} = \s\+\t\ - \texttt{dist} $.
 
 The normalized similarity score is defined as 1 minus the normalized distance.
 
